@@ -4,7 +4,9 @@
 // the motor sliding out under its own weight before ignition. Exhaust leaves through the open bottom.
 //
 // Change the numbers in this first block, then render (F6) and export STL.
-// Print in PETG or ASA (PLA softens near hot motor casings). 4 perimeters, 40% infill, tube upright.
+// Print in PLA (university printers), 4 perimeters, 40% infill, tube upright, LIBRARY printer (~2 h on an MK3).
+// PLA softens near a hot casing: line the bore with a cardboard tube (an 18/24/29 mm spent casing wrap works) and
+// expect to replace the holder after a few firings. Check it for softening after every burn.
 
 motor_d   = 29;     // motor casing diameter in mm: 24 or 29 (18 also allowed, e.g. for C6)
 holder_len = 85;    // tube length in mm, 70 to 100 (F15 is about 98 mm long: use 100)
