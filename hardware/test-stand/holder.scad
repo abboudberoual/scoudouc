@@ -1,3 +1,4 @@
+// SUPERSEDED: this is the old nozzle-DOWN holder. The current nozzle-UP design is cup.scad + cage.scad (kept here for reference only).
 // Scoudouc 0 thrust stand: motor holder (OpenSCAD).
 // Motor hangs NOZZLE-DOWN. Thrust pushes the motor UP, so the top of the motor presses on the
 // thick top plate, and the plate pushes up on the load cell platform. A lip at the bottom stops
