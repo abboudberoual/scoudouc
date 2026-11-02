@@ -30,3 +30,9 @@ Launch and land a small solid-fuel rocket under thrust, as fast and cheaply as p
 - Bambu Lab printers exist as a fallback for a part that is too slow or too tall for the others; do not design around them.
 - PLA only: anything within ~15 mm of the motor case needs a heat barrier (cardboard/phenolic liner, air gap or standoff). Say so in the part spec.
 - Every CAD deliverable ships with: estimated print time, orientation, infill, and which printer (LIBRARY or LAB).
+
+## Session start (every chat)
+Read, in this order, before doing anything else: the Notion hub header ("The Spirit of Scoudouc — Project Hub"), the "Needs me now" list, and the Decisions database. A decision whose Verdict is Approved / Rejected / Changed is the owner's ruling: update the matching docs/decisions file status, unblock or re-plan the dependent tasks, and never re-ask it in chat. Decisions are made in Notion, not in chat.
+
+## Session end ("wrap up")
+Commit and push; update Notion task statuses and the hub header (status line, red flag, this week's list); log every agent run's model and tokens in the Research Log; rewrite the project handoff doc so the next chat starts cold without losing anything.
