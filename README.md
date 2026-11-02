@@ -1,8 +1,12 @@
-# VTOL Rocket
+# The Spirit of Scoudouc
 
-A small solid-fuel model rocket that launches and lands upright under its own thrust, built as fast and cheaply as possible with most of the work done by AI agents.
+A small solid-fuel model rocket, called **Scoudouc**, that launches and lands upright under its own thrust, built as fast and cheaply as possible with most of the work done by AI agents.
 
-Project hub (tasks, milestones, costs, risks, learning): see the Notion page "VTOL Rocket — Project Hub".
+Project hub (tasks, milestones, costs, risks, learning): see the Notion page "The Spirit of Scoudouc — Project Hub".
+
+## The name
+
+Scoudouc is a rural area in New Brunswick with nothing remarkable about it, except that this project's owner grew up there on a farm. The Spirit of St. Louis was built in about two months on a small budget by a small company for an unknown pilot, after the famous names turned the job down. It won by being simple and fast. That is the spirit here.
 
 ## Plan in one paragraph
 

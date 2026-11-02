@@ -1,4 +1,4 @@
-# Working rules for agents in this repo
+# Working rules for agents in this repo (The Spirit of Scoudouc)
 
 ## Goal
 Launch and land a small solid-fuel rocket under thrust, as fast and cheaply as possible, while the owner learns each system. Keep token use low.
