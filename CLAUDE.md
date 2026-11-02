@@ -23,3 +23,9 @@ Launch and land a small solid-fuel rocket under thrust, as fast and cheaply as p
 - Decisions → `docs/decisions/NNN-short-name.md`
 - Research → `docs/research/` and the Notion Research Log
 - Measured data → `data/` as CSV with a header row and units
+
+## Printing constraints (university printers, PLA only)
+- Library: free, one part per job, under 6 hours. Design every part to print in under 6 h at 0.2 mm layers on a standard 220 mm bed, or mark it `LAB` in its spec.
+- Lab: longer jobs and several parts per plate; owner brings the PLA. Use for body sections, legs and spare batches.
+- PLA only: anything within ~15 mm of the motor case needs a heat barrier (cardboard/phenolic liner, air gap or standoff). Say so in the part spec.
+- Every CAD deliverable ships with: estimated print time, orientation, infill, and which printer (LIBRARY or LAB).
