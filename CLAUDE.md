@@ -25,7 +25,8 @@ Launch and land a small solid-fuel rocket under thrust, as fast and cheaply as p
 - Measured data → `data/` as CSV with a header row and units
 
 ## Printing constraints (university printers, PLA only)
-- Library: free, one part per job, under 6 hours. Design every part to print in under 6 h at 0.2 mm layers on a standard 220 mm bed, or mark it `LAB` in its spec.
-- Lab: longer jobs and several parts per plate; owner brings the PLA. Use for body sections, legs and spare batches.
+- Library: Prusa MK3 (250 x 210 x 210 mm bed, ~50 mm/s realistic), free, one part per job, under 6 hours. Estimate print times at MK3 speeds, not Bambu speeds, and design every part to fit under 6 h at 0.2 mm layers, or mark it `LAB`.
+- Lab: Creality printers (assume 220 x 220 x 250 mm), longer jobs, several parts per plate; owner brings the PLA. Use for body sections, legs and spare batches.
+- Bambu Lab printers exist as a fallback for a part that is too slow or too tall for the others; do not design around them.
 - PLA only: anything within ~15 mm of the motor case needs a heat barrier (cardboard/phenolic liner, air gap or standoff). Say so in the part spec.
 - Every CAD deliverable ships with: estimated print time, orientation, infill, and which printer (LIBRARY or LAB).
