@@ -41,3 +41,6 @@ Landing success = touchdown speed < 2 m/s and tilt < 10 deg. See `docs/learning/
 - Pad contact is a hard clamp; touchdown ends the run (no legs, no bounce, no tip-over).
 - Landing motor lights after a fixed igniter delay; the trigger uses a derated average thrust.
 - Simulation only: nothing here fires anything. Real ignition needs the arm step and physical arm switch per CLAUDE.md.
+
+## Replaying a flight as a picture or video
+`python -m scoudouc_sim.replay LOG.csv --strip out.png` makes a filmstrip (snapshots at even times plus apogee and each ignition). `--mp4 out.mp4 --speed 0.5` makes a half-speed video with a live readout and height/speed/tilt traces; `--gif` works the same way. The rocket is drawn a few times life size so it is visible against tens of metres of flight; the caption says by how much, and every number is true to the log.
