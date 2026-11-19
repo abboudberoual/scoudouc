@@ -1,5 +1,7 @@
 # Scoudouc 0 thrust test stand (nozzle UP)
 
+> **Note (2026-11-19):** this v1 stand (single PLA cup, HX711, plywood base) remains the **quick-start**. **v2** (`hardware/test-stand-v2/`, aluminium T-slot frame, swappable load-cell cartridges, ADS1220 recorder, C6 to I-class) is the long-lived stand. v2 is proposed in `docs/decisions/006-test-stand-v2.md`. v1 is not deleted.
+
 **What it does:** stands a small solid motor upright, nozzle up, and measures how hard it pushes (thrust) 80 times a second. It saves the result as a CSV you can plot. Motors: C6 up to F15, thrust 5 to 30 N, burns up to about 1.5 s.
 
 **What it does NOT do:** fire the motor. A commercial launch controller (with its own battery and safety key) does that. The stand's computer has no connection to the igniter at all. This is deliberate: the measuring part can be wrong or crash and it still cannot cause a firing.
