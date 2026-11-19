@@ -36,3 +36,11 @@ Read, in this order, before doing anything else: the Notion hub header ("The Spi
 
 ## Session end ("wrap up")
 Commit and push; update Notion task statuses and the hub header (status line, red flag, this week's list); log every agent run's model and tokens in the Research Log; rewrite the project handoff doc so the next chat starts cold without losing anything.
+
+## Cost loop (every hardware deliverable)
+Every design that will be bought or built ships with a `costing.md` beside it, and the loop runs in this order:
+1. **Cost it**: full BOM in CAD, Canadian sources, estimates marked. Split PRINTED vs PURCHASED.
+2. **Rank the drivers**: top five line items with % of total.
+3. **Reduce**: for each driver, concrete alternatives with the saving and what it costs us (capability, time, risk). Take the ones that keep the requirement. Give the reduced total.
+4. **Escalate**: if still over the budget line for that item, list which earlier decisions (by number) would bring it down and by how much. Do not change them; the owner does, in the Notion Decisions table.
+Every assembly drawing numbers each part and says PRINTED or PURCHASED with its cost. Costs go to the Notion Cost Scenarios database when the owner approves the build.
