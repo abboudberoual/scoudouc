@@ -10,8 +10,8 @@ screws into the cell's own thread.  The screw head sits in a pocket in the floor
     down a groove in the bore wall.
   - Print: floor DOWN on the bed, no supports, 0.2 mm, 4 perimeters, 5 top/bottom layers, 40% infill, LIBRARY (Prusa MK3).
 
-RING: a short tube with a flange.  The flange rests on two plywood cross-bars (72 mm apart) and is held by four
-#6 screws; the tube (66 mm across) hangs between the bars.  ID 50 mm lets the 46 mm 38-mm collar pass through, so the ring
+RING: a short tube with a flange.  The flange rests on two 2020 extrusion bars (72 mm clear between them) and is held by
+four M3 x 10 screws into M3 T-nuts in the bars' top slots; the tube (66 mm across) hangs between the bars.  ID 50 mm lets the 46 mm 38-mm collar pass through, so the ring
 guides the collar (2 mm gap) or the bare motor (6 to 16 mm gap).  It never carries thrust.
   - Print: flange DOWN on the bed (tube points up), no supports, 0.2 mm, 4 perimeters, 20% infill, LIBRARY.
 

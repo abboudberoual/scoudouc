@@ -1,15 +1,19 @@
-# Thrust stand v3 in plain language (move to docs/learning/ when you review)
+# Stand v3 in extrusion: what it is and why (plain language)
 
-**What it does.** A rocket motor pushes hard for a second or two. To see how hard, you stand the motor on a **load cell** (a small metal block that measures push by how much it squeezes) and record the number many times a second. The result is the **thrust curve**, the thing every flight calculation depends on.
+**Move to `docs/learning/` (it replaces the plywood parts of `thrust-stand-v3.md`).**
 
-**Why nozzle up.** The flame goes up into open air and the thrust pushes the motor *down* onto the cell, and the cell onto the ground. The test presses the stand into the ground instead of trying to throw it.
+**The idea.** The motor stands nozzle-up on a load cell. The rocket pushes down, the cell feels the push, and the number goes to the ESP32. Everything else only keeps the motor upright and the stand in place.
 
-**Why copy.** Three stands that have really been fired look alike: a frame, one cell on the floor, the motor on top. v2 ignored that and ended up with 36 parts and CAD 562. v3 copies the core, and each difference is justified in one line in `README.md`.
+**The frame.** Four aluminium bars (2020 means 20 mm square with T-shaped grooves, the "T-slots") stand up like a tower, with a small square frame at the bottom and the top. A nut slides into a groove and a screw into the nut, so anything bolts on anywhere: cameras, a rain cover, the ring. Corners are held with small L-brackets. The tower is 160 mm square and 523 mm tall, tall enough that a 360 mm motor stands fully inside.
 
-**The parts.** A *plywood base board* sits on the ground and carries the cell. The *cell* carries a *printed collar* that holds the motor foot. Two *plywood side panels* and two *cross-bars* hold a *printed ring* around the motor in case it tips (it should never touch). Four *ropes* from the base corners to *stakes* stop the stand sliding if the thrust is slightly sideways. A small *DAQ box* (an ESP32 with an ADS1220 chip) sits 2 m away and writes the numbers to an SD card. Firing the motor is done by the separate launch controller, never by this box.
+**Where the push goes.** Motor, collar, cell, a 3.2 mm aluminium plate, the two bottom bars the plate rests on, then the ground. The brackets and screws never feel the thrust. They hold the frame together and take the pull of the guy ropes.
 
-**One cell for every motor.** A load cell's error is a fixed percentage of its *full* rating. The 100 kg cell is wrong by about 0.3 N whatever you put on it. For a big motor (hundreds of N) that is nothing; for a C6 (about 14 N peak) it is about 2% at the peak and 6% on the flat part. That is good enough to see the curve and the burn time. If you want better on small motors, a 5 kg cell fits the same two bolts.
+**Why steel brackets, not printed.** Printed ones are CAD 13 cheaper but plastic slowly stretches under steady pull and softens near heat, and 24 of them is 24 print jobs at the library. The guy ropes pull on the bottom corners, and the top frame sits just above the flame. We picked steel.
 
-**What can go wrong.** A lead wire pulling on the collar looks like thrust (leave slack). A loose stake lets the stand shift (pull-test it). A PLA collar can soften (use the card liner, bin it if it looks shiny). Too much motor for the cell breaks the cell (check 1.5 x peak against its rating).
+**Why an aluminium plate, not plywood.** We checked the worst case, a dip in the ground so only two bars touch the plate. 6 mm plywood would break (safety factor 0.55, you want over 1.5). 3.2 mm aluminium gets 1.9. Aluminium also does not scorch.
 
-**Read next.** `README.md` for sizes and the hand check, `electronics.md` for wiring and calibration, `costing.md` for money, `docs/learning/load-cells-and-sampling.md` for why sample rate matters.
+**The ring.** A printed ring on two bars catches the motor if it tips. It sits at the motor's mid-height; loosen eight screws and slide the ladder to move it for a short motor. It never carries thrust.
+
+**The cost.** The extrusion tower is CAD 278.55 against 192.35 for plywood (+86). You chose it for durability and presentation; the CAD 120 line cannot be met with it (reduced build 176.47).
+
+**Weak spots to prove, not trust:** the stakes (pull-test each to 300 N), the plate alloy (must be 6061), and the frame's sideways stiffness (no diagonals).
