@@ -1,6 +1,6 @@
 # 006 — Thrust stand v2: aluminium frame, load-cell cartridges, I-class ceiling
 
-**Date:** 2026-11-19  **Status:** proposed
+**Date:** 2026-11-19  **Status:** replaced by 007
 
 ## What we decided
 Build a long-lived second stand ("Scoudouc Stand v2") for motors from C6 up to I-class (38 mm, about 600 N peak): a 2040 T-slot aluminium frame (3.08 m of extrusion, about 9 kg carried), a standard **load-cell cartridge** (same bolt pattern and plug) in three ratings (5 kg bar, 50 kg bar, 200 kg S-type), a printed motor-cup family (18, 24, 29, 38 mm, one flange), and an **ESP32-S3 + ADS1220** recorder at about 1000 samples a second. v1 stays the quick-start. Nozzle-up (decision 005) is unchanged. Ignition stays on a separate commercial launch controller.
