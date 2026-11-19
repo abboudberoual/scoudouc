@@ -44,3 +44,6 @@ Every design that will be bought or built ships with a `costing.md` beside it, a
 3. **Reduce**: for each driver, concrete alternatives with the saving and what it costs us (capability, time, risk). Take the ones that keep the requirement. Give the reduced total.
 4. **Escalate**: if still over the budget line for that item, list which earlier decisions (by number) would bring it down and by how much. Do not change them; the owner does, in the Notion Decisions table.
 Every assembly drawing numbers each part and says PRINTED or PURCHASED with its cost. Costs go to the Notion Cost Scenarios database when the owner approves the build.
+
+## Copy before you engineer (every hardware design)
+Before designing anything, find a working example built by someone who has flown or fired it (BPS.space, JRD Propulsion, university teams with results, forum builds with photos). Copy its layout and materials. Justify every departure in one line, and keep the parts count and cost at or below the example's. Requirements-driven design from scratch is the last resort, not the first step, and it has to say why no working example applied. The stand v2 (hardware/test-stand-v2) is the cautionary case: 36 parts and CAD 562 for a job BPS.space does with plywood and one load cell.
