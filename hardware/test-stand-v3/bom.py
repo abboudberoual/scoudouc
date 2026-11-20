@@ -4,7 +4,7 @@ Run: python3 bom.py"""
 P, B = "PURCHASED", "PRINTED"
 # (no, name, kind, qty, unit CAD, source, group)
 ITEMS = [
-    (1, "2020 T-slot aluminium extrusion, 1 m lengths (3.61 m used, cut list in README)", P, 4, 16.00, "Amazon.ca / Misumi CA / local (about 16 per metre: check)", "frame"),
+    (1, "VEVOR 2020 T-slot extrusion, black, 10 x 1000 mm pack (4 used here; 6 kept for swing rig and gimbal fixture)", P, 1, 67.99, "Amazon.ca B0F47L334H, seen 19 Nov 2026, in stock", "frame"),
     (2, "Inside-corner bracket kit, steel, 2020 (bracket + 2 M5 screws + 2 T-nuts each)", P, 24, 1.30, "Amazon.ca / AliExpress CA", "frame"),
     (3, "M5 drop-in T-nuts, pack of 20 (16 used: plate 8, guys 8)", P, 1, 4.00, "Amazon.ca", "frame"),
     (4, "M5 x 10 button-head screws, pack of 20 (16 used)", P, 1, 3.00, "Amazon.ca / Princess Auto", "frame"),
