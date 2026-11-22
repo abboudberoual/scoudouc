@@ -11,7 +11,7 @@ ITEMS = [
     (5, "Aluminium plate 3.2 mm (1/8 in) 6061-T6, 160 x 160 blank, owner cuts the corners", P, 1, 18.00, "Metal Supermarkets / Princess Auto", "frame"),
     (6, "Stainless pad eye (eye plate), 2 holes, M5 screws (guy anchor)", P, 4, 2.50, "Canadian Tire / marine store", "holddown"),
     (7, "M3 x 10 screws + M3 drop-in T-nuts (4 each) for the ring", P, 1, 4.00, "Amazon.ca", "frame"),
-    (8, "S-type load cell 100 kg, M12 thread", P, 1, 38.00, "Amazon.ca (CZL301 type)", "cell"),
+    (8, "S-type load cell 50 kg (covers C to H; 100 kg cell bought later for I-class), thread TBC", P, 1, 35.00, "Amazon.ca, seen 21 Nov 2026, Prime 2-day", "cell"),
     (9, "M12 hardware: SHCS 30 mm, hex bolt 25 mm, 2 fender washers", P, 1, 8.00, "Princess Auto / Home Depot", "cell"),
     (10, "Aluminium disc 2 mm (cut from flashing or a baking tray)", P, 1, 3.00, "Home Depot / Dollarama", "cell"),
     (11, "Guy rope, 4 mm polyester, 12 m", P, 1, 7.00, "Canadian Tire", "holddown"),
