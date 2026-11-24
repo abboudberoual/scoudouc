@@ -32,6 +32,7 @@ Launch and land a small solid-fuel rocket under thrust, as fast and cheaply as p
 - Bambu Lab printers exist as a fallback for a part that is too slow or too tall for the others; do not design around them.
 - PLA only: anything within ~15 mm of the motor case needs a heat barrier (cardboard/phenolic liner, air gap or standoff). Say so in the part spec.
 - Every CAD deliverable ships with: estimated print time, orientation, infill, and which printer (LIBRARY or LAB).
+- **Every part and vehicle has a 3D render** (owner's rule, 23 Nov): a CadQuery script in `hardware/cad/` that exports STEP + GLB and shaded PNGs via `hardware/cad/render.py` (orange PRINTED, navy PURCHASED, grey not-in-kit), regenerated whenever the geometry changes, and registered on Mission Control (`parts/<id>` with the render asset) so the board shows what is being built. Concept renders are labelled CONCEPT; the numbered callout drawing stays the drawing of record.
 
 ## Session start (every chat)
 Read, in this order, before doing anything else: `ops/agent-operating-model.md`; Mission Control (https://claude.ai/artifact/VjUxjh3WCvrnCw8MNwbxfD): `program/brief`, then the `tickets` collection ("Needs your call" = decision tickets `open` and `needs_info`). A decision ticket `approved` / `rejected` is the owner's ruling: update the matching docs/decisions file status, unblock or re-plan the dependent tickets (`depends_on`), and never re-ask it in chat. Decisions are made on Mission Control or in chat ("approve T-003"); the session records them on the ticket. The Notion hub is read-only history since 2026-11-23.
@@ -49,6 +50,9 @@ Every design that will be bought or built ships with a `costing.md` beside it, a
 3. **Reduce**: for each driver, concrete alternatives with the saving and what it costs us (capability, time, risk). Take the ones that keep the requirement. Give the reduced total.
 4. **Escalate**: if still over the budget line for that item, list which earlier decisions (by number) would bring it down and by how much. Do not change them; the owner does, in the Notion Decisions table.
 Every assembly drawing numbers each part and says PRINTED or PURCHASED with its cost. Costs go to the Notion Cost Scenarios database when the owner approves the build.
+
+## Requirement before hardware (owner's rule, 23 Nov)
+Every vehicle, mode or test article starts from a written test requirement, before any motor, mass or geometry is chosen: **prove what** (the one claim), **measured how** (the logged signal and the pass/fail number), **how much powered time and how many flights** that needs, and the margin. Motor, mass and airframe are then derived from it and the derivation is shown (simulator run or hand calculation, with the numbers). A decision that picks hardware without the requirement on top is not ready for the owner. Example: proving TVC needs ≥ 2 s of burn at a sustain thrust-to-weight ≥ 2 and ≥ 3 flights, which rules out the C6 and D12 on any vehicle that carries the avionics.
 
 ## Mass budget only when needed (owner's rule, 23 Nov)
 No mass budget is built or maintained ahead of need. Mass is an envelope derived from the test requirement (e.g. sustain TWR ≥ 2 on the chosen motor → max mass); an itemised budget is made only when a ticket asks for one for a vehicle that is about to be built, so it is not recalculated every time a decision moves. `docs/mass-budget.*` is historical until then.

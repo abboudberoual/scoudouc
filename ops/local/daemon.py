@@ -46,13 +46,14 @@ def run_one(path, job, model):
     sh("git fetch origin main", check=False)
     sh(f"git checkout -B {branch} origin/main", check=False)
     set_status(path, job, "running")
-    cmd = f"{sys.executable} ops/local/run_job.py \"{path}\"" + (f" --model {model}" if model else "")
-    proc = subprocess.run(cmd, shell=True, cwd=ROOT, capture_output=True, text=True)
+    cmd = [sys.executable, os.path.join(ROOT, "ops", "local", "run_job.py"), path] + (["--model", model] if model else [])
+    proc = subprocess.run(cmd, cwd=ROOT, capture_output=True, text=True)  # list form: safe with spaces in paths (Windows "C:\\Program Files")
     ok = proc.returncode == 0
     set_status(path, job, "done" if ok else "failed")
     sh(f"git add results/{job['id']} jobs/{os.path.basename(path)} metrics/events.csv", check=False)
     sh(f"git commit -m \"results: {job['id']} ({'pass' if ok else job.get('status')})\"", check=False)
     sh(f"git -c push.negotiate=true push -u origin {branch}", check=False)
+    sh("git checkout main", check=False)  # never leave the owner's working copy on a results branch
     print(proc.stdout.strip() or proc.stderr.strip()[-400:])
     return ok
 
