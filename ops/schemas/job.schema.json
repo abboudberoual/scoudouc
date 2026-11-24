@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Scoudouc local job (a ticket for the volunteer tier)",
+  "type": "object",
+  "required": ["id", "ticket", "type", "goal", "inputs", "output_schema", "acceptance", "budget", "escalate_if", "tier"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^T-[0-9]{3}-[0-9]+$"},
+    "ticket": {"type": "string", "pattern": "^T-[0-9]{3}$"},
+    "type": {"enum": ["extract", "convert", "draft", "generate", "sweep", "scout"]},
+    "tier": {"enum": ["code", "local"]},
+    "goal": {"type": "string", "maxLength": 300},
+    "inputs": {"type": "array", "items": {"type": "string"}, "description": "Repo-relative paths. Never a whole PDF: chunk first."},
+    "output_path": {"type": "string", "description": "Repo-relative path the result file is written to (under results/<id>/)."},
+    "output_schema": {"type": "object", "description": "JSON schema the output must satisfy; used for constrained decoding."},
+    "acceptance": {"type": "string", "description": "Shell command run from the repo root; exit 0 = pass."},
+    "budget": {"type": "object", "properties": {"minutes": {"type": "integer"}, "tokens": {"type": "integer"}, "attempts": {"type": "integer", "default": 2}}},
+    "escalate_if": {"type": "array", "items": {"enum": ["acceptance_fails_twice", "schema_invalid", "budget_exhausted", "confidence_below_0.7", "needs_browser"]}},
+    "model_hint": {"type": "string", "description": "e.g. qwen3:8b; the daemon may override by availability."},
+    "context_limit_tokens": {"type": "integer", "default": 8000},
+    "needs_browser": {"type": "boolean", "default": false},
+    "created_by": {"type": "string"},
+    "created_at": {"type": "string", "format": "date-time"},
+    "status": {"enum": ["queued", "running", "done", "failed", "stale"], "default": "queued"}
+  }
+}

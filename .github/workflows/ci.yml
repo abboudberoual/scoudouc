@@ -1,0 +1,22 @@
+name: ci
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install numpy matplotlib pytest
+      - name: Simulator tests
+        run: python -m pytest sim/tests -q
+      - name: Library validation
+        run: python data/library/validate.py
+      - name: Job and result schemas parse
+        run: python -c "import json;[json.load(open(f)) for f in ['ops/schemas/job.schema.json','ops/schemas/result.schema.json','ops/schemas/ticket.schema.json','.mcp.json']]"
+      - name: Metrics script runs
+        run: python ops/metrics/compute.py --week 2026-W48 > /dev/null

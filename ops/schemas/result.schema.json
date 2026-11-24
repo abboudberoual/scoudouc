@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Scoudouc local job result",
+  "type": "object",
+  "required": ["job", "status", "summary", "attempts", "cost"],
+  "properties": {
+    "job": {"type": "string"},
+    "status": {"enum": ["pass", "fail", "escalate"]},
+    "output_path": {"type": "string"},
+    "summary": {"type": "string", "maxLength": 1200, "description": "Under 200 words. The orchestrator reads this, never the raw output."},
+    "evidence": {"type": "array", "items": {"type": "string"}, "description": "Source URLs, log paths, test output paths."},
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1, "description": "Self-reported by the worker; used only as one mechanical escalation input, never as a decision."},
+    "attempts": {"type": "integer"},
+    "acceptance_output_path": {"type": "string"},
+    "escalation_reason": {"type": "string"},
+    "cost": {
+      "type": "object",
+      "properties": {
+        "model": {"type": "string"},
+        "prompt_tokens": {"type": "integer"},
+        "completion_tokens": {"type": "integer"},
+        "wall_seconds": {"type": "number"},
+        "energy_wh": {"type": "number"}
+      }
+    },
+    "started_at": {"type": "string"},
+    "finished_at": {"type": "string"}
+  }
+}

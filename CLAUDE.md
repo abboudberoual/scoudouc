@@ -3,11 +3,13 @@
 ## Goal
 Launch and land a small solid-fuel rocket under thrust, as fast and cheaply as possible, while the owner learns each system. Keep token use low.
 
-## Model selection (pick the cheapest that can do the job)
-- **haiku**: web research, summaries, filling Notion databases, link checks, log parsing, plotting.
-- **sonnet**: firmware, simulator code, test procedures, CAD scripts, docs/learning explainers.
-- **opus / fable**: control-loop design, landing-burn timing, pyro circuit safety review, any decision that is expensive to redo. Use sparingly.
-- Say which model you used and roughly how many tokens in every report, so it can be logged in the Notion Research Log.
+## Model selection (pick the cheapest that can do the job) — tiers, see ops/agent-operating-model.md
+- **code (tier 0)**: sims, parsers, BOM math, tests, metrics. If a program can do it, no model touches it.
+- **local (tier 1)**: extraction, conversion, drafts, small boilerplate against tests — written as a job to `jobs/` (schema `ops/schemas/job.schema.json`), run by the owner's machine, never trusted without the job's acceptance check. A local model never decides to escalate; escalation is mechanical.
+- **haiku**: grading local results (clean context: diff + ticket only), web research, summaries, link checks, log parsing, plotting; on the owner's laptop also the volunteer for code.
+- **sonnet**: tickets and acceptance tests, firmware, simulator code, test procedures, CAD scripts, docs/learning explainers.
+- **opus / fable**: control-loop design, landing-burn timing, pyro circuit safety review, regulatory text, any decision that is expensive to redo. Use sparingly.
+- Report the tokens the platform shows (never an estimate) in every run record and append the events to `metrics/events.csv` (`ops/metrics.md`).
 
 ## Style
 - Plain language. If a technical term is needed, explain it in one short clause the first time.
@@ -32,10 +34,13 @@ Launch and land a small solid-fuel rocket under thrust, as fast and cheaply as p
 - Every CAD deliverable ships with: estimated print time, orientation, infill, and which printer (LIBRARY or LAB).
 
 ## Session start (every chat)
-Read, in this order, before doing anything else: the Notion hub header ("The Spirit of Scoudouc — Project Hub"), the "Needs me now" list, and the Decisions database. A decision whose Verdict is Approved / Rejected / Changed is the owner's ruling: update the matching docs/decisions file status, unblock or re-plan the dependent tasks, and never re-ask it in chat. Decisions are made in Notion, not in chat.
+Read, in this order, before doing anything else: `ops/agent-operating-model.md`; Mission Control (https://claude.ai/artifact/VjUxjh3WCvrnCw8MNwbxfD): `program/brief`, then the `tickets` collection ("Needs your call" = decision tickets `open` and `needs_info`). A decision ticket `approved` / `rejected` is the owner's ruling: update the matching docs/decisions file status, unblock or re-plan the dependent tickets (`depends_on`), and never re-ask it in chat. Decisions are made on Mission Control or in chat ("approve T-003"); the session records them on the ticket. The Notion hub is read-only history since 2026-11-23.
 
 ## Session end ("wrap up")
-Commit and push; update Notion task statuses and the hub header (status line, red flag, this week's list); log every agent run's model and tokens in the Research Log; rewrite the project handoff doc so the next chat starts cold without losing anything.
+Commit and push (never to `main` except `library:` / `repair:` / `docs: changelog` commits); update ticket statuses and `program/brief` on Mission Control; write the run record (`runs/<date>-<agent>`) with the tokens the platform reports; append events to `metrics/events.csv`; rewrite the Project handoff doc (`claude/project-map.md`) so the next chat starts cold without losing anything.
+
+## Governance
+`ops/` is canonical: operating model, prompts, playbooks, schemas, measurement definitions, local tooling. Approved tickets become PRs on `ticket/T-NNN-slug`; the owner merges. Never: spend, buy, launch, fire, contact regulators/suppliers/landowners/sellers, change safety procedures or pyro code outside an approved ticket, create or change scheduled tasks, delete tickets or events.
 
 ## Cost loop (every hardware deliverable)
 Every design that will be bought or built ships with a `costing.md` beside it, and the loop runs in this order:
