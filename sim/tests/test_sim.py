@@ -184,3 +184,14 @@ def test_integrating_trigger_beats_stopping_distance_rule():
 def test_hot_motor_lands_harder_than_nominal():
     """The trigger trusts the nominal curve; a 10 % hot motor stops the rocket high."""
     assert _s2(0.660, "integrating", 1.10).touchdown_speed_mps > 2.0
+
+
+def test_integrating_trigger_fires_with_a_motor_that_cannot_stop_the_fall():
+    """C6 at 660 g has thrust below weight: it must still fire (and touch down fast)."""
+    c6, e12 = builtin_motor("C6"), builtin_motor("E12")
+    veh = VehicleParams(launch_mass_kg=0.660, length_m=0.6, radius_m=0.033, cg_to_nozzle_m=0.22)
+    cfg = MissionConfig(vehicle=veh, motor_a=e12, motor_b=c6, gains=PIDGains(kp=1.4, kd=0.16),
+                        trigger=IntegratingTrigger(c6, ignition_delay_s=0.1))
+    s = run_mission(cfg)[0]
+    assert s.landing_burn_fired and s.touched_down
+    assert s.t_landing_ignite_s < s.flight_time_s

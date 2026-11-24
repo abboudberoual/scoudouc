@@ -8,7 +8,8 @@ from typing import Optional
 
 from .thrust import ThrustCurve
 from .vehicle import Vehicle, VehicleParams, State
-from .control import PID, PIDGains, HoverslamTrigger
+from typing import Union
+from .control import PID, PIDGains, HoverslamTrigger, IntegratingTrigger
 
 
 @dataclass
@@ -17,7 +18,7 @@ class MissionConfig:
     motor_a: ThrustCurve
     gains: PIDGains
     motor_b: Optional[ThrustCurve] = None
-    trigger: Optional[HoverslamTrigger] = None
+    trigger: Optional[Union[HoverslamTrigger, IntegratingTrigger]] = None
     initial_tilt_deg: float = 0.0
     chute_cda_m2: float = 0.0       # drag area (Cd*A) of a parachute opened at apogee
     dt: float = 0.001               # physics step, 1 ms
