@@ -97,7 +97,14 @@ def main():
               "acceptance_output_path": f"results/{jid}/acceptance.log", "cost": {"model": model, "prompt_tokens": 0, "completion_tokens": 0},
               "started_at": now()}
 
-    if job["tier"] == "code":
+    missing = [rel for rel in job.get("inputs", []) if not os.path.exists(os.path.join(ROOT, rel))]
+    if missing and job["tier"] != "code":
+        # Never call a model without its inputs: a model asked to extract from nothing invents values
+        # (observed 2026-11-23: T-011-1 produced a fabricated C6 that passed a shape-only check).
+        result["status"] = "escalate"; result["escalation_reason"] = "missing_input: " + ", ".join(missing)
+        result["summary"] = f"Not run: input(s) missing ({', '.join(missing)}). The builder must fetch them first."
+        result["cost"]["model"] = "none"
+    elif job["tier"] == "code":
         result["attempts"] = 1
         ok = run_acceptance(job["acceptance"], acc_log)
         result["status"] = "pass" if ok else "escalate"
