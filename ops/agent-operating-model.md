@@ -38,8 +38,8 @@ Escalation is mechanical: test fails twice, schema invalid, budget exhausted, or
 
 CI runs the simulator tests and `data/library` validation on every PR and push to `main`. **The repo is canonical.** Anything that disagrees with the repo is stale.
 
-## Operating principle — bias to action
-Progress means the rocket's assets advanced: verified library data, sim success rates, printed parts, passing tests, open PRs, a truer board. `priority: build | deferred`; a `deferred` ticket is re-raised only when it concretely blocks a build step. Copy before you engineer (CLAUDE.md): every hardware design starts from a working example.
+## Operating principle — bias to action (owner's rule, 23 Nov 2026)
+Priority order: **build impact first, portfolio value second, admin last.** Progress means the rocket's assets advanced: verified library data, sim success rates, printed parts, passing tests, open PRs, a truer board. `priority: build | deferred`. Admin, legal and correspondence tickets are `deferred` with a `latest_by` date = the latest responsible moment minus the reply lead time (a municipal email: ~6 weeks before the launch it gates); they are re-raised only at `latest_by`, or when they concretely block a build step, and never flagged `critical` before that. Agents prefer doing a gating admin task themselves (reading a regulation into rules-as-code) over handing the owner an email. Tickets whose output can be shown carry `portfolio: true` and ship with photos, plots or a one-page explainer; the weekly status lists the portfolio pieces produced. Copy before you engineer (CLAUDE.md): every hardware design starts from a working example.
 
 ## Approval means execution
 When the owner approves a ticket on Mission Control (or says so in chat: "approve T-003", "T-007: plywood"), the work starts that night.

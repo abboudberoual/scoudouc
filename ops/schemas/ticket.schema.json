@@ -278,6 +278,14 @@
           }
         }
       }
+    },
+    "latest_by": {
+      "type": "string",
+      "description": "Deferred admin/legal tickets: latest responsible date; re-raised then."
+    },
+    "portfolio": {
+      "type": "boolean",
+      "description": "Output can be shown (photos, plots, video, explainer); ships with it."
     }
   }
 }
