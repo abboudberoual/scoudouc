@@ -144,3 +144,29 @@ def builtin_motor(name: str) -> ThrustCurve:
     area = sum(0.5 * (f[i] + f[i - 1]) * (t[i] - t[i - 1]) for i in range(1, len(t)))
     k = spec.total_impulse_ns / area
     return ThrustCurve(t, [v * k for v in f], name=key, propellant_kg=spec.propellant_kg)
+
+
+# --- RASP .eng files (thrustcurve.org format) -------------------------------------
+def load_eng(path: str) -> ThrustCurve:
+    """Load a RASP .eng motor file (the format thrustcurve.org serves).
+
+    Header line: name diameter_mm length_mm delays propellant_kg total_kg manufacturer.
+    Then one "time_s thrust_n" pair per line. Lines starting with ';' are comments.
+    """
+    with open(path) as fh:
+        lines = [ln.split(";", 1)[0].strip() for ln in fh]
+    lines = [ln for ln in lines if ln]
+    head = lines[0].split()
+    if len(head) < 7:
+        raise ValueError(f"{path}: bad .eng header {lines[0]!r}")
+    name, propellant_kg = head[0], float(head[4])
+    ts, fs = [], []
+    for ln in lines[1:]:
+        parts = ln.split()
+        if len(parts) < 2:
+            continue
+        t, f = float(parts[0]), float(parts[1])
+        if ts and t <= ts[-1]:
+            continue  # some files repeat a time stamp; keep the first
+        ts.append(t); fs.append(max(0.0, f))
+    return ThrustCurve(ts, fs, name=name, propellant_kg=propellant_kg)

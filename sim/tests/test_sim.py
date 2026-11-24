@@ -115,3 +115,72 @@ def test_pid_removes_initial_tilt_under_thrust():
     powered = [tl for tl, th in zip(log["tilt_deg"], log["thrust_n"]) if th > 0]
     assert abs(powered[-1]) < 1.0           # tilt mostly gone by burnout
     assert s.max_tilt_powered_deg <= 5.0 + 1e-6
+
+
+# --- T-010: .eng loader and integrating landing trigger ---------------------------
+from scoudouc_sim import load_eng, IntegratingTrigger  # noqa: E402
+
+ENG = """; sample RASP file
+E12 24 70 0-4-6-8 0.0358 0.0573 Estes
+0.05 16.0
+0.12 32.0
+0.30 18.0
+0.60 11.0
+2.10 9.5
+2.30 0.0
+"""
+
+
+def test_load_eng(tmp_path):
+    p = tmp_path / "Estes_E12.eng"
+    p.write_text(ENG)
+    m = load_eng(str(p))
+    assert m.name == "E12"
+    assert m.propellant_kg == pytest.approx(0.0358)
+    assert m.peak_thrust == pytest.approx(32.0)
+    assert m.burn_time == pytest.approx(2.30)
+    assert m.thrust(0.12) == pytest.approx(32.0)
+
+
+def _s2(mass_kg, trigger_kind, scale_b=1.0):
+    e12 = builtin_motor("E12")
+    veh = VehicleParams(launch_mass_kg=mass_kg, length_m=0.6, radius_m=0.033, cg_to_nozzle_m=0.22)
+    cda = veh.drag_cd * math.pi * veh.radius_m ** 2
+    trig = (IntegratingTrigger(e12, ignition_delay_s=0.1, drag_cda_m2=cda)
+            if trigger_kind == "integrating"
+            else HoverslamTrigger.from_motor(e12, thrust_trust=0.9, ignition_delay_s=0.1))
+    cfg = MissionConfig(vehicle=veh, motor_a=e12, motor_b=e12.scaled(scale_b),
+                        gains=PIDGains(kp=1.4, kd=0.16), trigger=trig)
+    return run_mission(cfg)[0]
+
+
+def test_integrating_trigger_never_fires_while_climbing():
+    trig = IntegratingTrigger(builtin_motor("E12"))
+    assert not trig.should_fire(10.0, 5.0, 0.62)
+    assert not trig.should_fire(10.0, 0.0, 0.62)
+
+
+def test_integrating_trigger_fires_when_waiting_makes_it_worse():
+    trig = IntegratingTrigger(builtin_motor("E12"))
+    # vz is up-positive. Falling slowly from high up: firing now would stop the rocket high, so wait.
+    assert not trig.should_fire(40.0, -2.0, 0.62)
+    # Falling fast close to the ground: already late, fire.
+    assert trig.should_fire(2.0, -20.0, 0.62)
+    # Predicted touchdown grows as the ignition height drops below the best point.
+    assert trig.predicted_touchdown(1.0, 20.0, 0.62) > trig.predicted_touchdown(15.0, 20.0, 0.62)
+
+
+@pytest.mark.parametrize("mass_kg", [0.660, 0.750])
+def test_integrating_trigger_lands_nominal_motor(mass_kg):
+    s = _s2(mass_kg, "integrating")
+    assert s.landing_burn_fired and s.touched_down
+    assert s.touchdown_speed_mps < 2.0
+
+
+def test_integrating_trigger_beats_stopping_distance_rule():
+    assert _s2(0.660, "integrating").touchdown_speed_mps < _s2(0.660, "stopping").touchdown_speed_mps
+
+
+def test_hot_motor_lands_harder_than_nominal():
+    """The trigger trusts the nominal curve; a 10 % hot motor stops the rocket high."""
+    assert _s2(0.660, "integrating", 1.10).touchdown_speed_mps > 2.0
