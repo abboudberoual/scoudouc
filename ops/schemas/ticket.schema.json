@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Mission Control ticket",
+  "type": "object",
+  "required": ["id", "title", "type", "area", "status", "priority", "owner", "vehicle", "tier", "size", "opened"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^T-[0-9]{3}$"},
+    "title": {"type": "string"},
+    "type": {"enum": ["auto", "decision", "buy"]},
+    "area": {"enum": ["data", "engine", "infra", "product", "legal", "program"]},
+    "status": {"enum": ["open", "in_progress", "blocked", "in_review", "needs_info", "approved", "rejected", "done"]},
+    "priority": {"enum": ["build", "deferred"]},
+    "owner": {"enum": ["owner", "sim-builder", "library-builder", "code-builder", "procurement", "orchestrator", "agent"]},
+    "vehicle": {"enum": ["Program", "S0", "S1", "S2", "S3", "S4"]},
+    "tier": {"enum": ["code", "local", "haiku", "sonnet", "opus"]},
+    "size": {"enum": ["S", "M", "L"], "description": "Set by the manager at creation; never by the worker."},
+    "critical": {"type": "boolean"},
+    "opened": {"type": "string"},
+    "note": {"type": "string"},
+    "recommended": {"type": "string"},
+    "options": {"type": "string"},
+    "pr": {"type": "string"},
+    "question": {"type": "string"},
+    "decided": {"type": "object", "properties": {"at": {"type": "string"}, "via": {"enum": ["dashboard", "chat", "notion"]}, "by": {"type": ["string", "null"]}}},
+    "depends_on": {"type": ["string", "null"]},
+    "sequence": {"type": "integer"},
+    "repo_file": {"type": "string"},
+    "buy": {
+      "type": "object",
+      "properties": {
+        "part": {"type": "string"}, "qty": {"type": "integer"}, "spec": {"type": "object"},
+        "new_price": {"type": "number"}, "new_lead_days": {"type": "integer"}, "vendor": {"type": "string"},
+        "used_eligible": {"enum": ["true", "false", "never", true, false]},
+        "max_distance_km": {"type": "number"}, "min_savings_pct": {"type": "number"}, "deadline": {"type": "string"},
+        "bought": {"type": "object"}
+      }
+    }
+  }
+}

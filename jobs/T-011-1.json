@@ -1,0 +1,37 @@
+{
+  "id": "T-011-1",
+  "ticket": "T-011",
+  "type": "extract",
+  "tier": "local",
+  "critical": false,
+  "goal": "Extract the Estes C6 motor into the motors.json entry schema from the attached thrustcurve .eng text.",
+  "inputs": ["data/library/raw/Estes_C6.eng"],
+  "output_path": "results/T-011-1/output.json",
+  "output_schema": {
+    "type": "object",
+    "required": ["entries"],
+    "properties": {"entries": {"type": "array", "items": {
+      "type": "object",
+      "required": ["designation", "manufacturer", "diameter_mm", "length_mm", "total_impulse_Ns", "avg_thrust_N", "max_thrust_N", "burn_s", "propellant_g", "total_g", "curve", "sources", "tier"],
+      "properties": {
+        "designation": {"type": "string"}, "manufacturer": {"type": "string"},
+        "diameter_mm": {"type": "number"}, "length_mm": {"type": "number"},
+        "total_impulse_Ns": {"type": "number"}, "avg_thrust_N": {"type": "number"}, "max_thrust_N": {"type": "number"},
+        "burn_s": {"type": "number"}, "propellant_g": {"type": "number"}, "total_g": {"type": "number"},
+        "curve": {"type": "array", "items": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2}},
+        "sources": {"type": "array", "items": {"type": "object", "required": ["url"], "properties": {"url": {"type": "string"}, "date": {"type": "string"}, "what": {"type": "string"}}}},
+        "tier": {"type": "string", "enum": ["seed", "single-source"]}
+      }
+    }}}
+  },
+  "acceptance": "python data/library/validate.py --file results/T-011-1/output.json",
+  "budget": {"minutes": 15, "tokens": 20000, "attempts": 2},
+  "escalate_if": ["acceptance_fails_twice", "schema_invalid", "budget_exhausted"],
+  "model_hint": "qwen3:8b",
+  "context_limit_tokens": 6000,
+  "needs_browser": false,
+  "created_by": "kickoff (claude-fable-5-1)",
+  "created_at": "2026-11-23T23:40:00Z",
+  "status": "queued",
+  "note": "The raw .eng file is fetched by the library builder into data/library/raw/ before this job runs (thrustcurve.org, Estes C6). Until then the job stays queued; the daemon reports a missing input and escalates, which is the expected first dry run."
+}
