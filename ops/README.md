@@ -23,3 +23,6 @@ python ops/local/daemon.py --once      # run one queued job
 python ops/local/daemon.py             # loop (leave running overnight; power: lid-close = nothing, no sleep)
 ```
 Energy accounting uses `SCOUDOUC_WATTS` (default 40); measure once with a plug meter.
+
+## Scoudouc cloud environment and scheduled tasks
+Environment `Scoudouc`: `env_01Dju6okZfThB68J4rHMsGE8`. Tasks (America/Toronto): sim-builder `trig_015nRGDgXzbojNaB4KTGVvWs` 02:37 · library-builder `trig_01JTZr9pZf8h9R92V1RYrYT8` 03:17 · code-builder `trig_013YTKt4DfKbjvPrEAPeUU8m` 04:17 · procurement `trig_01BxCwD16GChSPWwmpHTRnM4` 05:07 · retry `trig_01X7gyu7SHptL5U7aZMiMt8A` 05:37 · orchestrator `trig_01K44urE9G6gSrdQHh6J4GLo` Thu 03:37. Each task's prompt is its file in `ops/prompts/`; change the file by PR, then update the task's prompt to match.
