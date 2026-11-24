@@ -1,35 +1,48 @@
 # 002 — Airframe: body diameter and construction (Scoudouc 1 and 2)
 
-**Date:** 2026-11-02  **Status:** proposed
+**Date:** 2026-11-02, revised 2026-11-23  **Status:** proposed (owner asked for a decision matrix; recommendation changed from B to D)
 
-## What we decided
-Proposed: build Scoudouc 1 and 2 with a **74 mm (3 in) 3D-printed body in short sections**, not the 66 mm Estes BT-80 tube the roadmap lists. This changes the roadmap (S1 and S2 move from 66 mm to 74 mm; S3 and S4 were already 74 mm, so one body size from S1 onward). Needs the owner's OK.
+## What is being decided
+The body tube for Scoudouc 1 (40 cm) and 2 (60 cm): diameter and what it is made of. The free Garrett-R16 TVC mount is drawn for a "74 mm" tube (inside or outside diameter still unconfirmed: open item 1).
 
-## Options compared
-| | A. 66 mm BT-80 cardboard | B. 74 mm printed (recommended) | C. 76 mm thin-wall PETG |
-|---|---|---|---|
-| Fits free Garrett-R16 gimbal (made for 74 mm) | No: gimbal must be shrunk and the servo linkage redrawn | Yes, as designed | Loose; needs shims. If "74 mm" in that design means inside diameter, C is just B |
-| Body mass, S1 (40 cm) / S2 (60 cm) | ~47 g / ~70 g | ~107 g / ~160 g | ~85 g / ~130 g |
-| Cost per body (CAD, estimates) | ~10-15 plus a nose cone | ~3-5 of filament | ~3-4 of filament |
-| After a crash | Tube creases or splits; buy a new one | Reprint the broken section (hours); PETG survives better than PLA | Same as B, but the thinner wall cracks sooner |
-| Canada availability | In stock at bigboyswithcooltoys.ca (from our cost research) | Filament anywhere; needs a printer or print service (3dprintingcanada.com was in our research) | Same as B |
-| Other | Light, stiff, easy to cut and glue | Sections can hold bulkheads and leg mounts in the print | Saves ~30 g over B but 2 mm of slop around the gimbal |
+## Options
+- **A. 66 mm Estes BT-80 cardboard tube.** Standard model-rocket tube; the gimbal must be shrunk and its linkage redrawn.
+- **B. 74 mm 3D-printed sections (PLA/PETG).** The 2 Nov recommendation. Fits the gimbal as drawn; bulkheads and leg mounts print into the sections.
+- **C. 76 mm thin-wall printed PETG.** Lighter print, slop around the gimbal.
+- **D. 3-inch kraft/cardboard tube (~76 mm ID, LOC/Madcow class, or a 3" mailing tube) with printed rings, bulkheads and a gimbal adapter ring.** The tube is bought; everything that needs a shape is printed. This is how most flown TVC rockets are built: tube plus printed internals.
 
-## Why
-1. **The gimbal is the hard part and it is free, but only at 74 mm.** Shrinking it to 66 mm means redesigning pivot, servo arms and linkage: weeks of work on the exact system the owner most needs to understand.
-2. **The mass penalty is affordable.** B costs about 90 g more than A on S2. Our S2 estimate is ~660 g (see docs/mass-budget.md), which still gives thrust-to-weight 1.7 on an E12. A 66 mm body would give ~2.0, which we do not need.
-3. **Crashes are certain, and printed sections are cheaper and faster to replace** than tubes. One diameter from S1 to S4 also means one set of jigs, bulkheads and chute sizes.
+## Decision matrix
+Weights sum to 100 and come from the program goals (fast, cheap, learn each system, land). Scores 1–5 (5 best). Estimates are marked ~ and must be replaced by measurements before the build (open items).
 
-## What we gave up
-- About 90 g on S2 (60 g on S1) and a stiffer, cheaper-to-buy tube.
-- Cardboard is more forgiving of heat near the nozzle. Printed plastic must stay clear of the motor casing; check this in the static fire (PETG softens near 80 C, PLA near 55 C, so use PETG).
-- Printing time: roughly 12-16 h for an S2 body.
+| Criterion | Weight | A. 66 mm cardboard | B. 74 mm printed | C. 76 mm thin printed | D. 3" tube + printed internals |
+|---|---|---|---|---|---|
+| Body mass, S2 60 cm (~g) | 20 | 5 (~70) | 2 (~160–175) | 3 (~130) | 4 (~120) |
+| Heat tolerance near the motor | 15 | 5 (paper chars, does not soften) | 2 (PLA 55 °C, PETG 80 °C; needs a liner) | 2 | 5 |
+| Crash repair (cost, hours) | 15 | 3 (buy a tube, wait for shipping) | 4 (reprint a section, hours) | 3 | 4 (tube is cheap and stocked; reprint rings) |
+| Fit with the free gimbal | 15 | 1 (redesign pivot, arms, linkage) | 5 (as drawn) | 3 (shims) | 4 (one printed adapter ring; depends on open item 1) |
+| Time to first body | 10 | 4 (cut, glue, dry) | 2 (12–16 h of printing in <6 h library jobs = 3–4 jobs) | 2 | 4 |
+| Cost per body (CAD) | 5 | 4 (~10–15) | 5 (~3–5 filament) | 5 | 4 (~15–25) |
+| Stiffness / strength on landing | 10 | 4 | 3 (layer lines crack) | 2 | 4 |
+| Mounting legs, bulkheads, avionics | 10 | 3 (printed rings anyway) | 5 (in the print) | 4 | 4 (printed rings, glued) |
+| **Weighted total (max 500)** | | **365** | **330** | **285** | **415** |
 
-## Open items to check before printing
-- Open the Garrett-R16 files and confirm whether 74 mm is the tube **inside** or **outside** diameter. A 3 in tube is often 76 mm inside.
-- Weigh one printed ring and one printed section; replace the estimates in docs/mass-budget.csv.
-- That gimbal takes a **29 mm** motor. D12 and E12 are 24 mm, so a printed adapter sleeve is needed (F15 is 29 mm and fits directly).
-- Assumes the owner can print. If not, cost A looks better and the gimbal redesign becomes the price.
+**Result: D first, A second, B third.** The 2 Nov recommendation (B) rested almost entirely on gimbal fit; once heat and mass carry their weight, a bought tube with printed internals wins and keeps the gimbal fit through one adapter ring.
+
+**Sensitivity (what would change the answer):** B overtakes D only if "fit with the free gimbal" is weighted above ~45 and time-to-first-body is ignored, or if the tube cannot be sourced in Canada. A overtakes D only if the gimbal is redesigned anyway for another reason (then A's 1 becomes a 4 and A wins on mass). C never wins.
+
+## Recommended
+**D: 3-inch kraft tube with printed rings, bulkheads and a gimbal adapter ring**, pending open items 1–3. Keep B as the fallback if no 3" tube is available in Canada within a week.
+
+## What we give up with D
+- ~50 g over cardboard A on S2 (still thrust-to-weight ~1.9 on an E12 at ~640 g total).
+- Printed features are glued, not integral: joints are the weak point on a hard landing; design rings with generous glue area.
+- One more interface to get right (tube ID vs gimbal OD).
+
+## Open items before the build
+1. Open the Garrett-R16 files: is "74 mm" the tube inside or outside diameter? Decides the adapter ring.
+2. Source a 3" tube in Canada (LOC Precision / Madcow via Canadian dealers, or a 3" kraft mailing tube) and weigh a 60 cm length; replace the ~120 g estimate in docs/mass-budget.csv.
+3. Copy before you engineer: check what BPS.space Scout F and JRD Propulsion actually used for the airframe and record it here with a link.
+4. Print one adapter ring and one bulkhead; weigh them.
 
 ## Learn more
 https://github.com/Garrett-R16/TVC_Mount
