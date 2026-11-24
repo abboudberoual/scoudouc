@@ -5,6 +5,12 @@
 ## What is being decided
 One or two sentences. Which vehicle(s), what it unblocks.
 
+## Test requirement (required before any hardware choice)
+- **Prove what:** one claim.
+- **Measured how:** the logged signal and the pass/fail number.
+- **Powered time and flights needed:** seconds of burn, thrust-to-weight floor, number of flights, and why.
+- **Derived from it:** the mass / motor / geometry envelope this implies, with the simulator run or calculation and its numbers.
+
 ## Options
 A, B, C… one line each, including the "do the standard thing" option and the one a flown example used (copy before you engineer).
 

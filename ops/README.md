@@ -10,6 +10,9 @@
 
 Mission Control: https://claude.ai/artifact/VjUxjh3WCvrnCw8MNwbxfD
 
+## Cloud environment `Scoudouc` (created 23 Nov)
+Setup script installs `numpy matplotlib pytest trimesh manifold3d scipy networkx 'mcp<2' platformio` and runs the sim tests. `mcp<2` because `ops/local/mcp_server.py` uses `FastMCP` (renamed in mcp 2.x). Network: package registries + PlatformIO registry + github.com/objects + dl.espressif.com. `MPLBACKEND=Agg`, PlatformIO telemetry off. The `scoudouc-local` MCP server fails to connect in the cloud by design (it needs the owner's Ollama); builders treat that as "machine off".
+
 ## Local setup (owner's machine, Windows, 16 GB, no dGPU)
 ```
 winget install Ollama.Ollama
