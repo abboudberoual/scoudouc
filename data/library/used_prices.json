@@ -1,0 +1,35 @@
+{
+  "note": "Prices actually paid, as the owner recorded them on buy tickets (buy.bought). Written by the procurement builder. CAD, tax status as recorded.",
+  "entries": [
+    {
+      "ticket": "T-014",
+      "part": "S-type load cell 0–50 kg",
+      "price_cad": 40.24,
+      "condition": "new",
+      "source": "Amazon",
+      "ordered": "2026-11-21",
+      "delivered": "2026-11-23",
+      "recorded_at": "2026-11-25"
+    },
+    {
+      "ticket": "T-014",
+      "part": "NAU7802 24-bit ADC module",
+      "price_cad": 20.47,
+      "condition": "new",
+      "source": "Amazon",
+      "ordered": "2026-11-21",
+      "eta": "2026-12-01–07",
+      "recorded_at": "2026-11-25"
+    },
+    {
+      "ticket": "T-014",
+      "part": "2020 aluminium extrusion 10×1000 mm",
+      "price_cad": 78.17,
+      "condition": "new",
+      "source": "Amazon",
+      "ordered": "2026-11-21",
+      "eta": "2026-11-26–27",
+      "recorded_at": "2026-11-25"
+    }
+  ]
+}
