@@ -1,6 +1,6 @@
 # 002 — Airframe: body diameter and construction (Scoudouc 1 and 2)
 
-**Date:** 2026-11-02, revised 2026-11-23  **Status:** proposed (owner asked for a decision matrix; recommendation changed from B to D)
+**Date:** 2026-11-02, revised 2026-11-23  **Status:** accepted for S1–S2 — option **D** (3-inch kraft tube + printed internals), approved by the owner on Mission Control 2026-11-24 01:20 UTC (T-002). S3–S4 stay open as 002b until S2 flight data.
 
 ## What is being decided
 The body tube for Scoudouc 1 (40 cm) and 2 (60 cm): diameter and what it is made of. The free Garrett-R16 TVC mount is drawn for a "74 mm" tube (inside or outside diameter still unconfirmed: open item 1).
@@ -36,6 +36,9 @@ Weights sum to 100 and come from the program goals (fast, cheap, learn each syst
 
 ## Recommended
 **D: 3-inch kraft tube with printed rings, bulkheads and a gimbal adapter ring**, pending open items 1–3. Keep B as the fallback if no 3" tube is available in Canada within a week.
+
+## Decision (2026-11-24)
+The owner approved **D** for Scoudouc 1–2 on Mission Control (T-002). Open items 1–4 below are now their own tickets (T-035 to T-038); item 4 prints in **PLA**, not PETG, because the university printers are PLA only (CLAUDE.md). B stays the fallback if no 3-inch tube can be sourced in Canada within a week. Item 5 (002b, S3–S4) stays open until S2 flight data.
 
 ## What we give up with D
 - ~50 g over cardboard A on S2 (still thrust-to-weight ~1.9 on an E12 at ~640 g total).
