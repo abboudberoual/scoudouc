@@ -1,6 +1,8 @@
 # 007 — Thrust stand v3: 2020 extrusion tower, one S-type cell, copied from working stands
 
-**Date:** 2026-11-19  **Status:** PROPOSED  (replaces 006)
+**Date:** 2026-11-19  **Status:** ACCEPTED — option A (extrusion tower), approved by the owner on Mission Control 2026-11-24 01:10 UTC (T-007). Replaces 006.
+
+**As bought (2026-11-21/23):** VEVOR 10 x 1000 mm 2020 anodised extrusion (CAD 78.17, arriving 26–27 Nov) and a **0–50 kg** S-type load cell (CAD 40.24, delivered 23 Nov), not the 100 kg cell below. The 50 kg cell's 490 N ceiling covers C to G with margin and most H; revisit (buy the 100 kg cell) before any I-class fire. Still to buy: 6061 plate, brackets, guy ropes, stakes; still to print: collars and guide ring.
 
 **Update 2026-11-19: extrusion chosen for durability and presentation (it does not scorch; T-slots mount electronics; it will feature in videos and a portfolio); +CAD 86 recommended, +CAD 59 reduced against the plywood version.** The earlier estimate of about +CAD 25 was for a 300 mm box with printed brackets and a plywood plate; the tall tower needs 4 m of extrusion, steel brackets and an aluminium plate (`hardware/test-stand-v3/costing.md`). This is a proposal until the owner marks it Approved in Notion; the CAD 120 line is no longer reachable with extrusion (reduced 176.47).
 
