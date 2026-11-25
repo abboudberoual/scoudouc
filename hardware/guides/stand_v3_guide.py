@@ -192,7 +192,7 @@ STEPS = [
              "Cut the four L-shaped corner notches (each 20 &times; 40 plus 40 &times; 20 mm) with a hacksaw or jigsaw. File the cuts and round the outside corners.",
              "Drill the eight <b>5.5 mm</b> holes. Drill the centre hole to <b>13 mm</b> for an M12 cell (11 mm for M10) with a step drill, or pilot 5 mm then open up.",
              "Deburr both faces of every hole."],
-         parts=[(1, "Aluminium plate 3.2 mm 6061-T6, 160 &times; 160 (to buy)")], tools=["NO DRILL? Have the supplier cut and drill it from Appendix A, or wait for T-035 (no-drill mount)", "Drill, 5 / 5.5 mm bits, 13 mm step drill, centre punch", "Hacksaw, sandpaper"],
+         parts=[(1, "Aluminium plate 3.2 mm 6061-T6, 160 &times; 160 (to buy)")], tools=["NO DRILL? Have the supplier cut and drill it from Appendix A, or wait for T-039 (no-drill mount)", "Drill, 5 / 5.5 mm bits, 13 mm step drill, centre punch", "Hacksaw, sandpaper"],
          check=["Plate lies on the bottom frame later with no corner touching an upright (checked in step 6)", "Holes deburred on both faces"],
          warn=["Clamp the plate to the drill table: a grabbing step drill spins thin plate."]),
     Step("Bolt the cell to the plate", ["S-type load cell, 50 kg", "Hex bolt + fender washer (from below)"],
@@ -339,7 +339,7 @@ FRONT = [
 <tr><td class="have">HAVE</td><td>Metric hex keys, calipers, square + tape, multimeter, scale</td><td>all</td><td></td></tr>
 <tr><td class="need">BUY</td><td>Fine hacksaw (24–32 TPI) + mitre box, ~CAD 30 (tool #1 on the ranked list)</td><td>2</td><td>Buy 2020 pre-cut: 4 &times; 483, 6 &times; 160, 6 &times; 120 mm</td></tr>
 <tr><td class="need">BUY</td><td>Sandpaper 80–240 grit, ~CAD 6 (instead of files)</td><td>2, 3</td><td></td></tr>
-<tr><td class="need">BUY or AVOID</td><td>Drill, 5.5 mm bit, 13 mm step drill, centre punch (~CAD 80–130)</td><td>3</td><td><b>Avoid:</b> have the metal supplier cut and drill the plate from Appendix A, or wait for the no-drill cell mount (ticket T-035: printed saddle on two spare 2020 bars)</td></tr>
+<tr><td class="need">BUY or AVOID</td><td>Drill, 5.5 mm bit, 13 mm step drill, centre punch (~CAD 80–130)</td><td>3</td><td><b>Avoid:</b> have the metal supplier cut and drill the plate from Appendix A, or wait for the no-drill cell mount (ticket T-039: printed saddle on two spare 2020 bars)</td></tr>
 <tr><td class="need">LATER</td><td>Soldering iron (tool #2): NAU7802 wiring, not this mechanical build</td><td>&mdash;</td><td></td></tr></table>
 <p>No torque wrench needed: every torque is given with a hand-feel description.</p>
 <h3>Safety while building</h3>

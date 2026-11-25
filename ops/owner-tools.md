@@ -27,7 +27,7 @@ Last updated: 2026-11-25 (owner, in chat)
 3. Every guide's tool list says, per tool, HAVE or BUY; a BUY tool names the cheapest alternative that avoids it (e.g. print it, buy it pre-cut, have the supplier drill it).
 4. Torque: no torque wrench; write torques as "about N N·m" with a hand-feel description.
 
-## Ranked tool buy list (estimates, CAD; procurement builder confirms prices on T-036)
+## Ranked tool buy list (estimates, CAD; procurement builder confirms prices on T-040)
 | Rank | Tool | Unblocks | Est. CAD | Avoid it by |
 |---|---|---|---|---|
 | 1 | Fine hacksaw (24–32 TPI) + mitre box | Extrusion cuts (stand, swing rig, gimbal fixture), kraft airframe tube | ~30 | Buying 2020 pre-cut to length (bars already bought) |
