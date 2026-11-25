@@ -3,6 +3,10 @@ ts,ticket,vehicle,tier,task_type,size,actor,event,tokens_in,tokens_out,cache_rea
 2026-11-21T00:00:00Z,T-014,S0,,,S,owner,spend,,,,40.24,,,,Amazon S-type load cell 0-50 kg (delivered 2026-11-23)
 2026-11-21T00:00:00Z,T-014,S0,,,S,owner,spend,,,,20.47,,,,Amazon NAU7802 24-bit ADC module (eta 2026-12-01..07)
 2026-11-21T00:00:00Z,T-007,S0,,,M,owner,spend,,,,78.17,,,,Amazon VEVOR 10x1000 mm 2020 extrusion (eta 2026-11-26..27)
+2026-11-24T18:05:01Z,T-010,S2,sonnet,sim,L,claude-opus-5-5,started,,,,,,,,usage_unavailable; sim-builder manual confirmation run #2
+2026-11-24T18:05:01Z,T-010,S2,opus,review,L,claude-opus-5-5,graded,,,,,88,,1,usage_unavailable; Opus landing-trigger review APPROVE WITH CHANGES (subagent 34459 tokens reported by platform)
+2026-11-24T18:05:01Z,T-010,S2,sonnet,sim,L,claude-opus-5-5,pr_opened,,,,,,,,usage_unavailable; PR #7
+2026-11-24T18:05:01Z,T-010,S2,sonnet,sim,L,claude-opus-5-5,ci_green,,,,,,,1,usage_unavailable; PR #7
 2026-11-25T08:30:00Z,T-011,Program,3,scout,M,library-builder,job_written,,,,,,,,usage_unavailable; T-011-2 tier-0 fetch job (PR #8)
 2026-11-25T08:30:00Z,T-011,Program,3,scout,M,library-builder,pr_opened,,,,,,,,usage_unavailable; PR #8
 2026-11-25T08:30:00Z,T-012,Program,3,draft,M,library-builder,job_written,,,,,,,,usage_unavailable; T-012-1 local draft job
@@ -10,3 +14,11 @@ ts,ticket,vehicle,tier,task_type,size,actor,event,tokens_in,tokens_out,cache_rea
 2026-11-25T10:10:00Z,T-036,S1,3,procure,S,procurement,baseline_written,,,,,,,,usage_unavailable; haiku researcher subagent 33120 tokens (platform); Uline 3x60 ~CAD 8.18; mass warning ~365 g vs 120 g
 2026-11-25T07:40:00Z,,Program,3,regression,S,sim-builder,run_noop,,,,,,,,usage_unavailable; row appended by retry builder (no-op runs had no branch to commit on)
 2026-11-25T10:37:00Z,,Program,3,repair,S,retry,pr_opened,,,,,,,,usage_unavailable; rescued procurement commits stranded on claude/gracious-ritchie-3pm441 + playbook fix for where procurement and no-op runs commit
+2026-11-25T09:23:52Z,T-018,S0,3,procedure,S,code-builder,pr_opened,,,,,,,,usage_unavailable; PR #9; Opus review PASS WITH CHANGES applied
+2026-11-25T09:23:52Z,T-018,S0,3,procedure,S,code-builder,ci_green,,,,,,,1,usage_unavailable; PR #9
+2026-11-25T09:23:52Z,T-002,S1,3,docs,S,code-builder,pr_opened,,,,,,,,usage_unavailable; PR #10 decision status
+2026-11-25T09:23:52Z,T-007,S0,3,docs,M,code-builder,pr_opened,,,,,,,,usage_unavailable; PR #11 decision status
+2026-11-25T09:23:52Z,T-035,S1,,,S,code-builder,opened,,,,,,,,from 002 open item 1
+2026-11-25T09:23:52Z,T-036,S1,,,S,code-builder,opened,,,,,,,,from 002 open item 2
+2026-11-25T09:23:52Z,T-037,S1,,,S,code-builder,opened,,,,,,,,from 002 open item 3
+2026-11-25T09:23:52Z,T-038,S1,,,S,code-builder,opened,,,,,,,,from 002 open item 4

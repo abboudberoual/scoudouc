@@ -1,0 +1,13 @@
+vehicle,mass_g,motor,trigger,n,success_rate,touchdown_mps_p50,touchdown_mps_p10,touchdown_mps_p90,curves
+S2,660,E12/C6,stopping_distance,200,0.0,30.84,26.4,34.63,builtin_approx
+S2,660,E12/C6,integrating,200,0.0,22.12,18.01,34.63,builtin_approx
+S2,660,E12/D12,stopping_distance,200,0.0,19.99,16.08,23.35,builtin_approx
+S2,660,E12/D12,integrating,200,0.0,12.58,8.93,16.65,builtin_approx
+S2,660,E12/E12,stopping_distance,200,0.0,17.57,13.25,21.85,builtin_approx
+S2,660,E12/E12,integrating,200,0.025,8.61,3.5,12.77,builtin_approx
+S2,750,E12/C6,stopping_distance,200,0.0,26.21,21.64,30.13,builtin_approx
+S2,750,E12/C6,integrating,200,0.0,19.44,15.69,30.13,builtin_approx
+S2,750,E12/D12,stopping_distance,200,0.0,18.89,15.05,22.33,builtin_approx
+S2,750,E12/D12,integrating,200,0.0,11.44,8.07,15.01,builtin_approx
+S2,750,E12/E12,stopping_distance,200,0.0,16.32,12.18,20.13,builtin_approx
+S2,750,E12/E12,integrating,200,0.025,7.65,3.33,11.2,builtin_approx
