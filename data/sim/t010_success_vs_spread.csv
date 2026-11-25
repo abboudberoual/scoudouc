@@ -1,0 +1,15 @@
+vehicle,mass_g,motor,trigger,landing_spread_pct,boost_spread_pct,n,success_rate
+S2,660,E12/E12,integrating,0,0,150,1.0
+S2,660,E12/E12,integrating,1,1,150,0.367
+S2,660,E12/E12,integrating,2,2,150,0.187
+S2,660,E12/E12,integrating,3,3,150,0.12
+S2,660,E12/E12,integrating,5,5,150,0.073
+S2,660,E12/E12,integrating,10,10,150,0.027
+S2,660,E12/E12,integrating,15,15,150,0.007
+S2,750,E12/E12,integrating,0,0,150,1.0
+S2,750,E12/E12,integrating,1,1,150,0.4
+S2,750,E12/E12,integrating,2,2,150,0.187
+S2,750,E12/E12,integrating,3,3,150,0.14
+S2,750,E12/E12,integrating,5,5,150,0.073
+S2,750,E12/E12,integrating,10,10,150,0.027
+S2,750,E12/E12,integrating,15,15,150,0.02

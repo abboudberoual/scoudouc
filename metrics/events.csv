@@ -3,6 +3,10 @@ ts,ticket,vehicle,tier,task_type,size,actor,event,tokens_in,tokens_out,cache_rea
 2026-11-21T00:00:00Z,T-014,S0,,,S,owner,spend,,,,40.24,,,,Amazon S-type load cell 0-50 kg (delivered 2026-11-23)
 2026-11-21T00:00:00Z,T-014,S0,,,S,owner,spend,,,,20.47,,,,Amazon NAU7802 24-bit ADC module (eta 2026-12-01..07)
 2026-11-21T00:00:00Z,T-007,S0,,,M,owner,spend,,,,78.17,,,,Amazon VEVOR 10x1000 mm 2020 extrusion (eta 2026-11-26..27)
+2026-11-24T18:05:01Z,T-010,S2,sonnet,sim,L,claude-opus-5-5,started,,,,,,,,usage_unavailable; sim-builder manual confirmation run #2
+2026-11-24T18:05:01Z,T-010,S2,opus,review,L,claude-opus-5-5,graded,,,,,88,,1,usage_unavailable; Opus landing-trigger review APPROVE WITH CHANGES (subagent 34459 tokens reported by platform)
+2026-11-24T18:05:01Z,T-010,S2,sonnet,sim,L,claude-opus-5-5,pr_opened,,,,,,,,usage_unavailable; PR #7
+2026-11-24T18:05:01Z,T-010,S2,sonnet,sim,L,claude-opus-5-5,ci_green,,,,,,,1,usage_unavailable; PR #7
 2026-11-25T08:30:00Z,T-011,Program,3,scout,M,library-builder,job_written,,,,,,,,usage_unavailable; T-011-2 tier-0 fetch job (PR #8)
 2026-11-25T08:30:00Z,T-011,Program,3,scout,M,library-builder,pr_opened,,,,,,,,usage_unavailable; PR #8
 2026-11-25T08:30:00Z,T-012,Program,3,draft,M,library-builder,job_written,,,,,,,,usage_unavailable; T-012-1 local draft job
