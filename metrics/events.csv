@@ -10,6 +10,10 @@ ts,ticket,vehicle,tier,task_type,size,actor,event,tokens_in,tokens_out,cache_rea
 2026-11-25T08:30:00Z,T-011,Program,3,scout,M,library-builder,job_written,,,,,,,,usage_unavailable; T-011-2 tier-0 fetch job (PR #8)
 2026-11-25T08:30:00Z,T-011,Program,3,scout,M,library-builder,pr_opened,,,,,,,,usage_unavailable; PR #8
 2026-11-25T08:30:00Z,T-012,Program,3,draft,M,library-builder,job_written,,,,,,,,usage_unavailable; T-012-1 local draft job
+2026-11-25T10:10:00Z,T-014,S0,3,procure,S,procurement,library_logged,,,,,,,,usage_unavailable; 3 realised purchases to data/library/used_prices.json; open items gated on T-024/T-025
+2026-11-25T10:10:00Z,T-036,S1,3,procure,S,procurement,baseline_written,,,,,,,,usage_unavailable; haiku researcher subagent 33120 tokens (platform); Uline 3x60 ~CAD 8.18; mass warning ~365 g vs 120 g
+2026-11-25T07:40:00Z,,Program,3,regression,S,sim-builder,run_noop,,,,,,,,usage_unavailable; row appended by retry builder (no-op runs had no branch to commit on)
+2026-11-25T10:37:00Z,,Program,3,repair,S,retry,pr_opened,,,,,,,,usage_unavailable; rescued procurement commits stranded on claude/gracious-ritchie-3pm441 + playbook fix for where procurement and no-op runs commit
 2026-11-25T09:23:52Z,T-018,S0,3,procedure,S,code-builder,pr_opened,,,,,,,,usage_unavailable; PR #9; Opus review PASS WITH CHANGES applied
 2026-11-25T09:23:52Z,T-018,S0,3,procedure,S,code-builder,ci_green,,,,,,,1,usage_unavailable; PR #9
 2026-11-25T09:23:52Z,T-002,S1,3,docs,S,code-builder,pr_opened,,,,,,,,usage_unavailable; PR #10 decision status
