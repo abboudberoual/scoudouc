@@ -4,3 +4,5 @@ __pycache__/
 .venv/
 data/**/*.raw
 .DS_Store
+hardware/guides/out/**/*.png
+hardware/guides/out/**/*.html
