@@ -34,6 +34,9 @@ Launch and land a small solid-fuel rocket under thrust, as fast and cheaply as p
 - Every CAD deliverable ships with: estimated print time, orientation, infill, and which printer (LIBRARY or LAB).
 - **Every part and vehicle has a 3D render** (owner's rule, 23 Nov): a CadQuery script in `hardware/cad/` that exports STEP + GLB and shaded PNGs via `hardware/cad/render.py` (orange PRINTED, navy PURCHASED, grey not-in-kit), regenerated whenever the geometry changes, and registered on Mission Control (`parts/<id>` with the render asset) so the board shows what is being built. Concept renders are labelled CONCEPT; the numbered callout drawing stays the drawing of record.
 
+## Every build has a printable guide (owner's rule, 25 Nov)
+Anything the owner assembles ships with an illustrated, printable PDF step-by-step guide built by `hardware/guides/` (reference: G-001, thrust stand v3): per-step renders with the new parts highlighted and numbered, parts and tools per step, a check list per step, have/buy list, 1:1 templates where something is marked out, torque table, build record. Regenerate it whenever the geometry or the parts change.
+
 ## Session start (every chat)
 Read, in this order, before doing anything else: `ops/agent-operating-model.md`; Mission Control (https://claude.ai/artifact/VjUxjh3WCvrnCw8MNwbxfD): `program/brief`, then the `tickets` collection ("Needs your call" = decision tickets `open` and `needs_info`). A decision ticket `approved` / `rejected` is the owner's ruling: update the matching docs/decisions file status, unblock or re-plan the dependent tickets (`depends_on`), and never re-ask it in chat. Decisions are made on Mission Control or in chat ("approve T-003"); the session records them on the ticket. The Notion hub is read-only history since 2026-11-23.
 
