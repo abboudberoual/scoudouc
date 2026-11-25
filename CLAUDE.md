@@ -34,6 +34,9 @@ Launch and land a small solid-fuel rocket under thrust, as fast and cheaply as p
 - Every CAD deliverable ships with: estimated print time, orientation, infill, and which printer (LIBRARY or LAB).
 - **Every part and vehicle has a 3D render** (owner's rule, 23 Nov): a CadQuery script in `hardware/cad/` that exports STEP + GLB and shaded PNGs via `hardware/cad/render.py` (orange PRINTED, navy PURCHASED, grey not-in-kit), regenerated whenever the geometry changes, and registered on Mission Control (`parts/<id>` with the render asset) so the board shows what is being built. Concept renders are labelled CONCEPT; the numbered callout drawing stays the drawing of record.
 
+## Design for the tools on hand (owner's rule, 25 Nov)
+Designs use the owner's tools (`ops/owner-tools.md`: today only hex keys, calipers, multimeter, square, tape, scale; no drill, saw or soldering iron; no workshop), printed parts, and pre-made or pre-drilled hardware. A design that needs a missing tool says which tool, what it unblocks and the cheapest way to avoid it; unavoidable tools go on the one ranked buy list there (ordered by critical-path work unblocked, then price), never one at a time.
+
 ## Every build has a printable guide (owner's rule, 25 Nov)
 Anything the owner assembles ships with an illustrated, printable PDF step-by-step guide built by `hardware/guides/` (reference: G-001, thrust stand v3): per-step renders with the new parts highlighted and numbered, parts and tools per step, a check list per step, have/buy list, 1:1 templates where something is marked out, torque table, build record. Regenerate it whenever the geometry or the parts change.
 

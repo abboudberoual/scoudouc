@@ -182,7 +182,7 @@ STEPS = [
              "Cut square in a mitre box with a fine hacksaw (24 TPI or finer) or a chop saw with a non-ferrous blade. Clamp the bar; let the saw do the work.",
              "Deburr every cut with a file. File a <b>1 mm chamfer</b> on the ends that meet a bracket.",
              "Measure every piece and write the length on it with a marker. Uprights within &plusmn;0.5 mm of each other matter most: unequal uprights rack the frame."],
-         parts=[(4, "2020 bars, 1000 mm (you have 10)")], tools=["Hacksaw + mitre box (or chop saw, non-ferrous blade)", "Square, tape, marker", "Flat file", "Clamp", "Safety glasses, gloves"],
+         parts=[(4, "2020 bars, 1000 mm (you have 10)")], tools=["BUY: fine hacksaw + mitre box (or buy the pieces pre-cut)", "HAVE: square, tape", "Marker", "BUY: sandpaper (instead of a file)", "Safety glasses, gloves"],
          check=["4 &times; 483, 6 &times; 160, 6 &times; 120 mm, labelled", "The four uprights within 0.5 mm of each other", "No burrs: run a glove over every end"],
          warn=["Cut aluminium edges are sharp: gloves on until every end is filed."],
          tip="Keep the six spare bars: the swing rig (rung R2) and the gimbal fixture use them."),
@@ -192,7 +192,7 @@ STEPS = [
              "Cut the four L-shaped corner notches (each 20 &times; 40 plus 40 &times; 20 mm) with a hacksaw or jigsaw. File the cuts and round the outside corners.",
              "Drill the eight <b>5.5 mm</b> holes. Drill the centre hole to <b>13 mm</b> for an M12 cell (11 mm for M10) with a step drill, or pilot 5 mm then open up.",
              "Deburr both faces of every hole."],
-         parts=[(1, "Aluminium plate 3.2 mm 6061-T6, 160 &times; 160 (to buy)")], tools=["Centre punch, scribe", "Drill, 5 mm + 5.5 mm bits, 13 mm step drill", "Hacksaw or jigsaw, file"],
+         parts=[(1, "Aluminium plate 3.2 mm 6061-T6, 160 &times; 160 (to buy)")], tools=["NO DRILL? Have the supplier cut and drill it from Appendix A, or wait for T-035 (no-drill mount)", "Drill, 5 / 5.5 mm bits, 13 mm step drill, centre punch", "Hacksaw, sandpaper"],
          check=["Plate lies on the bottom frame later with no corner touching an upright (checked in step 6)", "Holes deburred on both faces"],
          warn=["Clamp the plate to the drill table: a grabbing step drill spins thin plate."]),
     Step("Bolt the cell to the plate", ["S-type load cell, 50 kg", "Hex bolt + fender washer (from below)"],
@@ -334,8 +334,14 @@ FRONT = [
 <p>This guide uses the parts you already bought (extrusion, 50 kg cell, NAU7802), which differ from the README in two places: the cell is 50 kg instead of 100 kg (fine: the program fires E/F motors, the cell takes up to G), and the ADC is a NAU7802 instead of an ADS1220 (firmware port is T-022). Prices are estimates in CAD before tax; agents never buy, you do.</p>
 <table><tr><th></th><th>Part</th><th>Qty</th><th class="num">CAD</th></tr>{shop_rows}
 <tr><td></td><td><b>Still to buy for the mechanical build</b></td><td></td><td class="num"><b>~102</b></td></tr></table>
-<h3>Tools</h3>
-<p>Hacksaw and mitre box (or a chop saw with a non-ferrous blade) &middot; flat file &middot; square and tape &middot; calipers &middot; drill with 5 mm and 5.5 mm bits and a 13 mm step drill &middot; centre punch &middot; hex keys 2.5, 3, 4 and 10 mm &middot; wrench for the cell bolt (19 mm for M12) &middot; clamps &middot; safety glasses and gloves &middot; marker and masking tape.</p>
+<h3>Tools (checked against ops/owner-tools.md)</h3>
+<table><tr><th></th><th>Tool</th><th>Steps</th><th>If you don't want to buy it</th></tr>
+<tr><td class="have">HAVE</td><td>Metric hex keys, calipers, square + tape, multimeter, scale</td><td>all</td><td></td></tr>
+<tr><td class="need">BUY</td><td>Fine hacksaw (24–32 TPI) + mitre box, ~CAD 30 (tool #1 on the ranked list)</td><td>2</td><td>Buy 2020 pre-cut: 4 &times; 483, 6 &times; 160, 6 &times; 120 mm</td></tr>
+<tr><td class="need">BUY</td><td>Sandpaper 80–240 grit, ~CAD 6 (instead of files)</td><td>2, 3</td><td></td></tr>
+<tr><td class="need">BUY or AVOID</td><td>Drill, 5.5 mm bit, 13 mm step drill, centre punch (~CAD 80–130)</td><td>3</td><td><b>Avoid:</b> have the metal supplier cut and drill the plate from Appendix A, or wait for the no-drill cell mount (ticket T-035: printed saddle on two spare 2020 bars)</td></tr>
+<tr><td class="need">LATER</td><td>Soldering iron (tool #2): NAU7802 wiring, not this mechanical build</td><td>&mdash;</td><td></td></tr></table>
+<p>No torque wrench needed: every torque is given with a hand-feel description.</p>
 <h3>Safety while building</h3>
 <p>Cut aluminium is sharp until filed. Clamp thin plate when drilling. No motor goes near the stand until step 15 and procedure 01.</p>"""),
 ]
@@ -356,11 +362,11 @@ BACK = [
 <tr><td>Upright lengths (4)</td><td></td></tr><tr><td>Bottom / top diagonals</td><td></td></tr><tr><td>Ladder rail top above plate</td><td></td></tr>
 <tr><td>Collar printed (size, printer, date)</td><td></td></tr><tr><td>Stake pull test at site (N, movement)</td><td></td></tr>
 <tr><td>Deviations from this guide</td><td></td></tr></table>
-<h3>Revision log</h3><table><tr><th>Rev</th><th>Date</th><th>Change</th></tr><tr><td>A</td><td>2026-11-25</td><td>First issue, for the parts bought 21 Nov (50 kg cell, NAU7802)</td></tr></table>"""),
+<h3>Revision log</h3><table><tr><th>Rev</th><th>Date</th><th>Change</th></tr><tr><td>A</td><td>2026-11-25</td><td>First issue, for the parts bought 21 Nov (50 kg cell, NAU7802)</td></tr><tr><td>A1</td><td>2026-11-25</td><td>Tools checked against the owner inventory: HAVE/BUY per tool, ways to avoid buying a drill</td></tr></table>"""),
 ]
 
-GUIDE = dict(id="G-001", title="Thrust stand v3 — assembly guide", rev="A", date="2026-11-25",
+GUIDE = dict(id="G-001", title="Thrust stand v3 — assembly guide", rev="A1", date="2026-11-25",
              subtitle="Scoudouc &middot; rung R1 static fires &middot; 2020 extrusion tower, 50 kg S-type cell, nozzle-up",
              parts=P, steps=STEPS, front=FRONT, back=BACK, cover_left=COVER_LEFT, cover_right=COVER_RIGHT,
              cover_hide=FIELD + ["Dummy motor 24 x 70 mm (dowel or spent casing)"], cover_view=(22, -55),
-             pdf_name="G-001-thrust-stand-v3-assembly-guide-revA.pdf")
+             pdf_name="G-001-thrust-stand-v3-assembly-guide-revA1.pdf")
