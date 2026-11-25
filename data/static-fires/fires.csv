@@ -1,0 +1,1 @@
+fire_id,date,motor,lot,delay_s,set_id,igniter,controller_batt_v,ambient_c,wind_kmh,mass_before_g,mass_after_g,cal_slope_n_per_count,tare_n,timing_source,ignition_delay_s,peak_n,burn_s,impulse_raw_ns,impulse_corr_ns,thrust_file,video_file,anomalies
