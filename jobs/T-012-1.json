@@ -1,0 +1,113 @@
+{
+  "id": "T-012-1",
+  "ticket": "T-012",
+  "type": "draft",
+  "tier": "local",
+  "critical": true,
+  "goal": "Draft rules-as-code entries from the attached plain-language summary of SOR/2026-206 and related rules: per-purchase impulse limit, R-class mapping, storage limits (mark R.1/R.2 ss. 331-333.1 as flag:'text unread'), site distances by motor class, parachute/recovery requirement. One entry per rule. 'section' must be the exact section cited in the input; 'machine' holds the numbers as fields (e.g. {max_impulse_Ns: 80}); never add a number that is not in the input. review must be null (Opus reviews before merge).",
+  "inputs": [
+    "docs/regulatory/sor-2026-206-summary.md"
+  ],
+  "output_path": "results/T-012-1/output.json",
+  "output_schema": {
+    "type": "object",
+    "required": [
+      "entries"
+    ],
+    "properties": {
+      "entries": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "id",
+            "authority",
+            "section",
+            "text",
+            "machine",
+            "sources",
+            "review",
+            "tier"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "authority": {
+              "type": "string"
+            },
+            "section": {
+              "type": "string"
+            },
+            "text": {
+              "type": "string"
+            },
+            "machine": {
+              "type": "object"
+            },
+            "sources": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "url"
+                ],
+                "properties": {
+                  "url": {
+                    "type": "string"
+                  },
+                  "date": {
+                    "type": "string"
+                  },
+                  "what": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "review": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                null
+              ]
+            },
+            "tier": {
+              "type": "string",
+              "enum": [
+                "seed",
+                "single-source"
+              ]
+            },
+            "flag": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "acceptance": "python data/library/validate.py --kind rules --file results/T-012-1/output.json",
+  "budget": {
+    "minutes": 15,
+    "tokens": 20000,
+    "attempts": 2
+  },
+  "escalate_if": [
+    "acceptance_fails_twice",
+    "schema_invalid",
+    "budget_exhausted"
+  ],
+  "model_hint": "qwen3:8b",
+  "context_limit_tokens": 6000,
+  "needs_browser": false,
+  "created_by": "library-builder (nightly 2026-11-25)",
+  "created_at": "2026-11-25T08:25:00Z",
+  "status": "queued",
+  "note": "Draft only. Every entry touches impulse, storage or site distance, so none is committed to rules.json until an Opus review is recorded (review: opus) and each number is checked against the Justice Laws text by the builder."
+}
