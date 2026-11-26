@@ -23,3 +23,12 @@ ts,ticket,vehicle,tier,task_type,size,actor,event,tokens_in,tokens_out,cache_rea
 2026-11-25T09:23:52Z,T-037,S1,,,S,code-builder,opened,,,,,,,,from 002 open item 3
 2026-11-25T09:23:52Z,T-038,S1,,,S,code-builder,opened,,,,,,,,from 002 open item 4
 2026-11-26T08:19:42Z,T-011,Program,code,extract,M,library-builder,result,,,,,,,1,T-011-2 run in cloud at tier 0; 12 fetched 9 integrated single-source; usage_unavailable
+2026-11-26T07:46:00Z,,S2,3,regression,S,sim-builder,run_regression,,,,,93,,1,usage_unavailable; t010_sweep rerun after PR #7 merge; results identical; no-op row from the 26 Nov sim-builder run record appended by code-builder
+2026-11-25T20:06:18Z,T-010,S2,,,L,owner,merged,,,,,,,,PR #7; logged by code-builder reconciliation 26 Nov
+2026-11-25T20:06:32Z,T-011,Program,,,M,owner,merged,,,,,,,,PR #8; logged by code-builder reconciliation 26 Nov
+2026-11-25T20:06:51Z,T-018,S0,,,S,owner,merged,,,,,,,,PR #9; logged by code-builder reconciliation 26 Nov
+2026-11-25T20:07:09Z,T-002,S1,,,S,owner,merged,,,,,,,,PR #10; logged by code-builder reconciliation 26 Nov
+2026-11-25T20:07:33Z,T-007,S0,,,M,owner,merged,,,,,,,,PR #11; logged by code-builder reconciliation 26 Nov
+2026-11-25T20:09:02Z,,Program,,,,owner,merged,,,,,,,,PR #12 (ops rescue); logged by code-builder reconciliation 26 Nov
+2026-11-25T20:09:16Z,,S0,,,,owner,merged,,,,,,,,PR #13 (assembly guides); logged by code-builder reconciliation 26 Nov
+2026-11-26T09:19:37Z,,Program,3,reconcile,S,claude-opus-5-5,run_reconcile,,,,,,,,usage_unavailable; agent=code-builder; no approved tickets; changelog + merged events for PRs #7-#13
