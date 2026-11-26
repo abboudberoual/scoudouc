@@ -32,3 +32,7 @@ ts,ticket,vehicle,tier,task_type,size,actor,event,tokens_in,tokens_out,cache_rea
 2026-11-25T20:09:02Z,,Program,,,,owner,merged,,,,,,,,PR #12 (ops rescue); logged by code-builder reconciliation 26 Nov
 2026-11-25T20:09:16Z,,S0,,,,owner,merged,,,,,,,,PR #13 (assembly guides); logged by code-builder reconciliation 26 Nov
 2026-11-26T09:19:37Z,,Program,3,reconcile,S,claude-opus-5-5,run_reconcile,,,,,,,,usage_unavailable; agent=code-builder; no approved tickets; changelog + merged events for PRs #7-#13
+2026-11-26T10:09:22.350485+00:00,T-040,,local,scout,,none,result,0,0,,,0.0,0.0,0,missing_input: https://www.facebook.com/marketplace/item/1457722415820979/; https://www.facebook.com/marketplace/item/2237245686824681/; https://www.facebook.com/marketplace/item/1586893669630844/; https://www.facebook.com/marketplace/item/1413381517303050/
+2026-11-26T10:30:00Z,T-040,Program,3,procure,S,procurement,baseline_written,,,,,,,,usage_unavailable; CT new CA$109.19; used box+hacksaw wins CA$37.50 vs 59.22; soldering new wins
+2026-11-26T10:30:00Z,T-040,Program,local,scout,S,procurement,escalated,,,,,,,0,usage_unavailable; T-040-1 FB recheck refused: daemon has no browser runner
+2026-11-26T10:30:00Z,T-036,S1,3,procure,S,procurement,checked,,,,,,,,usage_unavailable; LOC 3.0 is carbon only; no CA kraft airframe price
