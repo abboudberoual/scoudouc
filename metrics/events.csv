@@ -22,3 +22,4 @@ ts,ticket,vehicle,tier,task_type,size,actor,event,tokens_in,tokens_out,cache_rea
 2026-11-25T09:23:52Z,T-036,S1,,,S,code-builder,opened,,,,,,,,from 002 open item 2
 2026-11-25T09:23:52Z,T-037,S1,,,S,code-builder,opened,,,,,,,,from 002 open item 3
 2026-11-25T09:23:52Z,T-038,S1,,,S,code-builder,opened,,,,,,,,from 002 open item 4
+2026-11-26T08:19:42Z,T-011,Program,code,extract,M,library-builder,result,,,,,,,1,T-011-2 run in cloud at tier 0; 12 fetched 9 integrated single-source; usage_unavailable
