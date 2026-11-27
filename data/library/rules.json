@@ -1,1 +1,136 @@
-[]
+[
+  {
+    "id": "CA-EXP-318-2",
+    "authority": "Explosives Regulations, 2013 (SOR/2013-211), Part 15 Div. 1, as amended to SOR/2026-206",
+    "section": "s. 318(1)–(2)",
+    "text": "(1) A user who is at least 18 years old may acquire and store rocket motors, reloading kits and igniters, whether or not they hold a licence. A user who acquires rocket motors, reloading kits or igniters must comply with this Division. (2) A user who is at least 12 years old may acquire and store single use rocket motors with an impulse that does not exceed 80 newton-seconds and igniters for those motors without a licence. A user who acquires such motors or igniters must comply with this Division.",
+    "machine": {
+      "applies_to": "model_rocket_motors",
+      "licence_required": false,
+      "min_age_any_model_motor": 18,
+      "min_age_single_use_le_80Ns": 12,
+      "single_use_max_impulse_Ns_for_age_12_to_17": 80
+    },
+    "sources": [
+      {
+        "url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2013-211/page-25.html",
+        "date": "2026-11-27",
+        "what": "s. 318 verbatim"
+      }
+    ],
+    "source_url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2013-211/page-25.html",
+    "source_date": "2026-11-27",
+    "tier": "single-source",
+    "review": "opus",
+    "review_note": "2026-11-27 Opus reviewer subagent checked verbatim text, numbers and reading against the Justice Laws pages; 318/320 quotes corrected to verbatim per review. G8 is a model rocket motor (s. 307(1): <=160 N·s)."
+  },
+  {
+    "id": "CA-EXP-320-1",
+    "authority": "Explosives Regulations, 2013 (SOR/2013-211), Part 15 Div. 1, as amended to SOR/2026-206",
+    "section": "s. 320(1), (3), (4)",
+    "text": "(1) No more than 200 kg of rocket motors and reloading kits (combined quantity) and no more than 2 500 igniters may be stored at any one time. If high-power rocket motors or reloading kits for high-power rocket motors are stored with rocket motors or reloading kits, the combined quantity must not exceed 200 kg. If igniters for high-power rocket motors are stored with igniters, the combined quantity must not exceed 2 500. (3) Rocket motors, reloading kits and igniters must be stored in a dwelling or a storage unit. (4) A model rocket in which the motor has been installed must not be stored.",
+    "machine": {
+      "applies_to": "model_rocket_motors",
+      "user": "unlicensed_adult",
+      "max_motor_and_reload_mass_kg": 200,
+      "max_igniters": 2500,
+      "places": [
+        "dwelling",
+        "storage_unit"
+      ],
+      "store_with_motor_installed": false,
+      "overridden_by_if_high_power_in_dwelling": "CA-EXP-331-1"
+    },
+    "sources": [
+      {
+        "url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2013-211/page-25.html",
+        "date": "2026-11-27",
+        "what": "s. 320 verbatim"
+      }
+    ],
+    "source_url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2013-211/page-25.html",
+    "source_date": "2026-11-27",
+    "tier": "single-source",
+    "review": "opus",
+    "review_note": "2026-11-27 Opus reviewer subagent checked verbatim text, numbers and reading against the Justice Laws pages; 318/320 quotes corrected to verbatim per review. G8 is a model rocket motor (s. 307(1): <=160 N·s)."
+  },
+  {
+    "id": "CA-EXP-320-2",
+    "authority": "Explosives Regulations, 2013 (SOR/2013-211), Part 15 Div. 1, as amended to SOR/2026-206",
+    "section": "s. 320(2)",
+    "text": "A user who is less than 18 years old may store no more than 6 single use rocket motors with an impulse that does not exceed 80 newton-seconds, and no more than 10 igniters.",
+    "machine": {
+      "applies_to": "model_rocket_motors",
+      "user": "under_18",
+      "max_motors": 6,
+      "max_impulse_each_Ns": 80,
+      "max_igniters": 10
+    },
+    "sources": [
+      {
+        "url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2013-211/page-25.html",
+        "date": "2026-11-27",
+        "what": "s. 320(2) verbatim"
+      }
+    ],
+    "source_url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2013-211/page-25.html",
+    "source_date": "2026-11-27",
+    "tier": "single-source",
+    "review": "opus",
+    "review_note": "2026-11-27 Opus reviewer subagent checked verbatim text, numbers and reading against the Justice Laws pages; 318/320 quotes corrected to verbatim per review. G8 is a model rocket motor (s. 307(1): <=160 N·s)."
+  },
+  {
+    "id": "CA-EXP-321-1",
+    "authority": "Explosives Regulations, 2013 (SOR/2013-211), Part 15 Div. 1, as amended to SOR/2026-206",
+    "section": "s. 321(1)",
+    "text": "When rocket motors, reloading kits or igniters are stored in a dwelling, they must be stored away from flammable substances and sources of ignition, in a manner that protects them from theft and ensures that access to them is limited to people authorized by the user.",
+    "machine": {
+      "applies_to": "model_rocket_motors",
+      "place": "dwelling",
+      "away_from": [
+        "flammable_substances",
+        "ignition_sources"
+      ],
+      "theft_protected": true,
+      "access": "authorized_by_user_only"
+    },
+    "sources": [
+      {
+        "url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2013-211/page-25.html",
+        "date": "2026-11-27",
+        "what": "s. 321(1) verbatim"
+      }
+    ],
+    "source_url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2013-211/page-25.html",
+    "source_date": "2026-11-27",
+    "tier": "single-source",
+    "review": "opus",
+    "review_note": "2026-11-27 Opus reviewer subagent checked verbatim text, numbers and reading against the Justice Laws pages; 318/320 quotes corrected to verbatim per review. G8 is a model rocket motor (s. 307(1): <=160 N·s)."
+  },
+  {
+    "id": "CA-EXP-331-1",
+    "authority": "Explosives Regulations, 2013 (SOR/2013-211), Part 15 Div. 2 (high-power), as amended to SOR/2026-206",
+    "section": "s. 331(1)",
+    "text": "In the case of storage in a dwelling, no more than 10 kg of rocket motors and reloading kits (combined quantity) and no more than 40 igniters may be stored at any one time. If model rocket motors or reloading kits for model rocket motors are stored with rocket motors or reloading kits, the combined quantity must not exceed 10 kg. If igniters for model rocket motors are stored with igniters, the combined quantity must not exceed 40.",
+    "machine": {
+      "applies_to": "high_power_rocket_motors",
+      "place": "dwelling",
+      "max_motor_and_reload_mass_kg": 10,
+      "max_igniters": 40,
+      "model_motors_count_toward_limit_when_stored_together": true
+    },
+    "sources": [
+      {
+        "url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2013-211/page-26.html",
+        "date": "2026-11-27",
+        "what": "s. 331(1) verbatim"
+      }
+    ],
+    "source_url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2013-211/page-26.html",
+    "source_date": "2026-11-27",
+    "tier": "single-source",
+    "review": "opus",
+    "review_note": "2026-11-27 Opus reviewer subagent checked verbatim text, numbers and reading against the Justice Laws pages; 318/320 quotes corrected to verbatim per review. G8 is a model rocket motor (s. 307(1): <=160 N·s).",
+    "note": "Applies to high-power motors; binds model motors only when stored together with high-power motors."
+  }
+]

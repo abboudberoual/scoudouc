@@ -36,3 +36,5 @@ ts,ticket,vehicle,tier,task_type,size,actor,event,tokens_in,tokens_out,cache_rea
 2026-11-26T10:30:00Z,T-040,Program,3,procure,S,procurement,baseline_written,,,,,,,,usage_unavailable; CT new CA$109.19; used box+hacksaw wins CA$37.50 vs 59.22; soldering new wins
 2026-11-26T10:30:00Z,T-040,Program,local,scout,S,procurement,escalated,,,,,,,0,usage_unavailable; T-040-1 FB recheck refused: daemon has no browser runner
 2026-11-26T10:30:00Z,T-036,S1,3,procure,S,procurement,checked,,,,,,,,usage_unavailable; LOC 3.0 is carbon only; no CA kraft airframe price
+2026-11-27T08:21:23Z,T-019,Program,3,regulatory,S,library-builder,done,,,,,,,1,usage_unavailable; 5 storage rules from SOR/2013-211 ss. 318-331 into rules.json; reviewer subagent 31338 tokens (opus) 2 FIX applied
+2026-11-27T08:21:23Z,T-012-1,Program,local,draft,M,library-builder,checked,,,,,,,,usage_unavailable; daemon status pending (no result after 2 nights)
