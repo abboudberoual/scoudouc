@@ -49,3 +49,7 @@ ts,ticket,vehicle,tier,task_type,size,actor,event,tokens_in,tokens_out,cache_rea
 2026-11-28T08:40:00Z,T-011,Program,3,library,M,library-builder,second_source,,,,,,,1,usage_unavailable; 3 motors to dual-source; 3 flagged; Haiku researcher subagent 83566 tokens (platform)
 2026-11-28T08:40:00Z,T-012,Program,3,library,M,library-builder,rules_added,,,,,,,1,usage_unavailable; tier_fallback: haiku (draft discarded, not verbatim; 20269 tokens); 5 rules from official text; Opus review 32088 tokens (platform)
 2026-11-28T08:40:00Z,,Program,3,library,S,library-builder,stock_check,,,,,,,,usage_unavailable; no vendors.json entries: nothing to refresh
+2026-11-28T09:17:00Z,,Program,3,build,S,code-builder,run_noop,,,,,,,,usage_unavailable
+2026-11-28T07:40:00Z,,Program,3,regression,S,sim-builder,check_regression,,,,,,,1,usage_unavailable; no sim/ or motors.json change since eb92af2; no approved tickets; no-op run (row not committed)
+2026-11-28T10:10:00Z,,Program,3,procurement,S,procurement-builder,buy_check,,,,,,,,usage_unavailable; no-op: 4 buy tickets, 0 candidates, 0 used wins
+2026-11-28T10:40:00Z,,Program,3,retry,S,retry,run_retry,,,,,,,1,usage_unavailable; all 4 builders reported, none blocked; no approved tickets; jobs T-011-2 and T-012-1 marked stale (no Haiku redo: delivered / size M); appended 3 no-op rows

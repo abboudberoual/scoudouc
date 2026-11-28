@@ -119,6 +119,6 @@
   "needs_browser": false,
   "created_by": "library-builder (nightly 2026-11-25)",
   "created_at": "2026-11-25T08:20:00Z",
-  "status": "queued",
-  "note": "Tier 0, no model. Output entries are tier single-source; the builder adds the second source (manufacturer/NAR cert data) and commits library:. Raw .eng files stay in results/T-011-2/ for provenance."
+  "status": "stale",
+  "note": "Tier 0, no model. Output entries are tier single-source; the builder adds the second source (manufacturer/NAR cert data) and commits library:. Raw .eng files stay in results/T-011-2/ for provenance. STALE 2026-11-28 (retry): no result after 3 nights. Work already delivered by tier-0 code in 946578e (9 motors) and dual-sourced in a0be359; no Haiku redo needed."
 }
