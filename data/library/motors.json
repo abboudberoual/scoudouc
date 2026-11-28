@@ -282,14 +282,19 @@
    {
     "url": "https://estesrockets.com/products/c6-5-engines",
     "date": "2026-11-26",
-    "what": "page gives only nominal class value 10 N\u00b7s; not a usable second source"
+    "what": "page gives only nominal class value 10 N·s; not a usable second source"
+   },
+   {
+    "url": "https://estesrockets.com/products/c6-0-engines",
+    "date": "2026-11-28",
+    "what": "Estes C6-0 page: 10.00 N·s, 15.30 N max, 1.60 s, 12.2 g propellant, 21.5 g"
    }
   ],
   "tier": "single-source",
   "raw_file": "data/library/raw/Estes_C6_69eb2379c7d63000021d8c29.eng",
   "source_url": "https://www.thrustcurve.org/simfiles/69eb2379c7d63000021d8c29/",
   "source_date": "2026-11-26",
-  "flag": "total impulse 8.82 N\u00b7s (thrustcurve) vs NAR 2023 re-cert 8.27 N\u00b7s cited in T-011 = +6.6 %, over the 5 % acceptance; NAR sheet unreachable from cloud (403)",
+  "flag": "three sources disagree on total impulse: thrustcurve 8.82, NAR 2023 re-cert 8.27 (per T-011), Estes C6-0 page 10.00 N·s (+13 %); burn 1.86 vs 1.60 s; needs NAR cert sheet (403 from cloud)",
   "second_source_needed": "NAR/TRA certification sheet (nar.org blocked from cloud) for every numeric value"
  },
  {
@@ -615,14 +620,19 @@
    {
     "url": "https://estesrockets.com/products/e12-4-engines",
     "date": "2026-11-26",
-    "what": "page: thrust duration 2.70 s, nominal 30 N\u00b7s"
+    "what": "page: thrust duration 2.70 s, nominal 30 N·s"
+   },
+   {
+    "url": "https://estesrockets.com/products/e12-0-engines",
+    "date": "2026-11-28",
+    "what": "Estes E12-0 page: 28.80 N·s, 31.30 N max, 2.60 s, 36.9 g propellant, 58.1 g"
    }
   ],
   "tier": "single-source",
   "raw_file": "data/library/raw/Estes_E12_5f4294d20002e900000007ad.eng",
   "source_url": "https://www.thrustcurve.org/simfiles/5f4294d20002e900000007ad/",
   "source_date": "2026-11-26",
-  "flag": "burn time 2.44 s (thrustcurve) vs 2.70 s (Estes page) = 10 % apart; total impulse 27.24 N\u00b7s vs nominal 30",
+  "flag": "fails 5 % acceptance vs Estes E12-0 page: impulse 27.24 vs 28.80 N·s (5.7 %), burn 2.44 vs 2.60 s (6.6 %; E12-4 page said 2.70 s), max 33.29 vs 31.30 N (6 %); needs NAR cert sheet as tie-breaker",
   "second_source_needed": "NAR/TRA certification sheet (nar.org blocked from cloud) for every numeric value"
  },
  {
@@ -778,13 +788,20 @@
     "url": "https://www.thrustcurve.org/simfiles/5f4294d20002e9000000044e/",
     "date": "2026-11-26",
     "what": "thrustcurve.org RASP curve + summary metadata"
+   },
+   {
+    "url": "https://cdn.shopify.com/s/files/1/0615/7592/1878/files/AeroTech_Master_Motor_Matrix_4-2-23.pdf",
+    "date": "2026-11-28",
+    "what": "AeroTech Master Motor Matrix (4/2/23), row E12-RCJ (RMS-R/C 24/40): 36 N·s, 11.2 N avg, 18.3 N max, 3.05 s, 30.3 g, 59.4 g"
    }
   ],
   "tier": "single-source",
   "raw_file": "data/library/raw/AeroTech_E12_5f4294d20002e9000000044e.eng",
   "source_url": "https://www.thrustcurve.org/simfiles/5f4294d20002e9000000044e/",
   "source_date": "2026-11-26",
-  "second_source_needed": "NAR/TRA certification sheet (nar.org blocked from cloud) for every numeric value"
+  "second_source_needed": "NAR/TRA certification sheet (nar.org blocked from cloud) for every numeric value",
+  "flag": "impulse 34.22 vs matrix 36 N·s (5.2 %, matrix value looks rounded); avg, max, burn, masses agree; reload: needs RMS-R/C 24/40 case",
+  "reload_case": "RMS-R/C 24/40"
  },
  {
   "designation": "Estes E16",
@@ -936,14 +953,19 @@
    {
     "url": "https://estesrockets.com/products/e16-4-engines",
     "date": "2026-11-26",
-    "what": "total impulse 33.68 N\u00b7s (thrustcurve 33.38, +0.9 %)"
+    "what": "total impulse 33.68 N·s (thrustcurve 33.38, +0.9 %)"
+   },
+   {
+    "url": "https://edu.estesrockets.com/products/e16-0-engines",
+    "date": "2026-11-28",
+    "what": "Estes E16-0 page: 33.68 N·s, 26.44 N max, 2.09 s, 40.0 g propellant, 73.1 g (zero-delay)"
    }
   ],
-  "tier": "single-source",
+  "tier": "dual-source",
   "raw_file": "data/library/raw/Estes_E16_5f4294d20002e900000007e6.eng",
   "source_url": "https://www.thrustcurve.org/simfiles/5f4294d20002e900000007e6/",
   "source_date": "2026-11-26",
-  "second_source_needed": "NAR/TRA certification sheet (nar.org blocked from cloud) for every numeric value"
+  "dual_source_note": "impulse 0.9 %, max/burn/propellant exact; total mass depends on delay (E16-0 73.1 g vs 84 g with delay); avg thrust = impulse/burn agrees within 1 %"
  },
  {
   "designation": "AeroTech E16",
@@ -1066,13 +1088,19 @@
     "url": "https://www.thrustcurve.org/simfiles/5f4294d20002e90000000282/",
     "date": "2026-11-26",
     "what": "thrustcurve.org RASP curve + summary metadata"
+   },
+   {
+    "url": "https://cdn.shopify.com/s/files/1/0615/7592/1878/files/AeroTech_Master_Motor_Matrix_4-2-23.pdf",
+    "date": "2026-11-28",
+    "what": "AeroTech Master Motor Matrix (updated 4/2/23), rows E16-4W/E16-7W: 37.67 N·s, 18.8 N avg, 37.2 N max, 2.00 s, 19 g propellant, 107.8/109 g"
    }
   ],
-  "tier": "single-source",
+  "tier": "dual-source",
   "raw_file": "data/library/raw/AeroTech_E16_5f4294d20002e90000000282.eng",
   "source_url": "https://www.thrustcurve.org/simfiles/5f4294d20002e90000000282/",
   "source_date": "2026-11-26",
-  "second_source_needed": "NAR/TRA certification sheet (nar.org blocked from cloud) for every numeric value"
+  "reload_case": "RMS-29/40-120 (reload: needs the reusable case)",
+  "dual_source_note": "all six numeric values agree with the AeroTech matrix within 0.3 %"
  },
  {
   "designation": "Estes F15",
@@ -1212,14 +1240,19 @@
    {
     "url": "https://estesrockets.com/products/f15-4-engines",
     "date": "2026-11-26",
-    "what": "total impulse 49.6 N\u00b7s, max thrust 25.26 N (both match thrustcurve)"
+    "what": "total impulse 49.6 N·s, max thrust 25.26 N (both match thrustcurve)"
+   },
+   {
+    "url": "https://edu.estesrockets.com/products/f15-6-engines",
+    "date": "2026-11-28",
+    "what": "Estes F15-6 page: 49.61 N·s, 25.26 N max, 3.45 s, 60.0 g propellant, 103.8 g"
    }
   ],
-  "tier": "single-source",
+  "tier": "dual-source",
   "raw_file": "data/library/raw/Estes_F15_5f4294d20002e900000007e5.eng",
   "source_url": "https://www.thrustcurve.org/simfiles/5f4294d20002e900000007e5/",
   "source_date": "2026-11-26",
-  "second_source_needed": "NAR/TRA certification sheet (nar.org blocked from cloud) for every numeric value"
+  "dual_source_note": "impulse, max thrust, burn, propellant exact; total mass 102 vs 103.8 g (1.8 %, F15-6 delay); avg thrust = impulse/burn agrees"
  },
  {
   "designation": "AeroTech G8",

@@ -132,5 +132,144 @@
     "review": "opus",
     "review_note": "2026-11-27 Opus reviewer subagent checked verbatim text, numbers and reading against the Justice Laws pages; 318/320 quotes corrected to verbatim per review. G8 is a model rocket motor (s. 307(1): <=160 N·s).",
     "note": "Applies to high-power motors; binds model motors only when stored together with high-power motors."
+  },
+  {
+    "id": "CA-EXP-307-1",
+    "authority": "Explosives Regulations, 2013 (SOR/2013-211), Part 15 (general), as amended to SOR/2026-206",
+    "section": "s. 307(1)",
+    "text": "(1) The following definitions apply in this Part. advanced high-power rocket motor advanced high-power rocket motor means a recreational rocket motor with an impulse that is produced by combustion of a solid propellent and exceeds 40 960 newton-seconds but does not exceed 889 600 newton-seconds. ( moteur de fusée haute puissance avancée ) distributor distributor means a person who sells rocket motors, reloading kits or igniters to other distributors or to retailers, whether or not they sell to users. ( distributeur ) licence licence means a licence that authorizes storage of the type of rocket motor, reloading kit or igniter to be sold or acquired. ( licence ) high-power rocket motor high-power rocket motor means a recreational rocket motor with an impulse that is produced by combustion of a solid propellent and exceeds 160 newton-seconds but does not exceed 40 960 newton-seconds. ( moteur de fusée haute puissance ) model rocket motor model rocket motor means a recreational rocket motor with an impulse that is produced by combustion of a solid propellent and does not exceed 160 newton-seconds. ( moteur de fusée miniature ) reloading kit reloading kit means a package that contains a solid propellant and other components that are designed to be used in a reloadable rocket motor. ( trousse de rechargement ) retailer retailer means a person, other than a distributor, who sells rocket motors, reloading kits or igniters. ( détaillant ) seller seller means a distributor or a retailer. ( vendeur ) user user means a person who acquires rocket motors, reloading kits or igniters for use. ( utilisateur )",
+    "machine": {
+      "model_rocket_motor_max_impulse_Ns": 160,
+      "high_power_min_impulse_Ns_exclusive": 160,
+      "high_power_max_impulse_Ns": 40960,
+      "advanced_high_power_min_impulse_Ns_exclusive": 40960,
+      "advanced_high_power_max_impulse_Ns": 889600,
+      "propellant": "solid"
+    },
+    "sources": [
+      {
+        "url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2013-211/page-25.html",
+        "date": "2026-11-28",
+        "what": "s. 307(1) definitions verbatim"
+      }
+    ],
+    "source_url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2013-211/page-25.html",
+    "source_date": "2026-11-28",
+    "tier": "single-source",
+    "review": "opus",
+    "review_note": "2026-11-28 Opus reviewer subagent checked text verbatim against the saved Justice Laws pages and the machine fields; fixes applied (307 authority, 321(2) fields + flag, 602.43 flag)."
+  },
+  {
+    "id": "CA-EXP-319-2",
+    "authority": "Explosives Regulations, 2013 (SOR/2013-211), Part 15 Div. 1, as amended to SOR/2026-206",
+    "section": "s. 319(2)",
+    "text": "(2) A user who does not hold a licence must store their rocket motors, reloading kits and igniters in a dwelling or a storage unit and must ensure that the requirements of sections 320 and 321 are met.",
+    "machine": {
+      "applies_to": "unlicensed_user",
+      "place": [
+        "dwelling",
+        "storage_unit"
+      ],
+      "must_meet": [
+        "s. 320",
+        "s. 321"
+      ]
+    },
+    "sources": [
+      {
+        "url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2013-211/page-25.html",
+        "date": "2026-11-28",
+        "what": "s. 319(2) verbatim"
+      }
+    ],
+    "source_url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2013-211/page-25.html",
+    "source_date": "2026-11-28",
+    "tier": "single-source",
+    "review": "opus",
+    "review_note": "2026-11-28 Opus reviewer subagent checked text verbatim against the saved Justice Laws pages and the machine fields; fixes applied (307 authority, 321(2) fields + flag, 602.43 flag)."
+  },
+  {
+    "id": "CA-EXP-321-2",
+    "authority": "Explosives Regulations, 2013 (SOR/2013-211), Part 15 Div. 1, as amended to SOR/2026-206",
+    "section": "s. 321(2)",
+    "text": "(2) When rocket motors, reloading kits or igniters are stored in a storage unit, (a) the storage unit must be located away from flammable substances and sources of ignition; (b) the storage unit must be constructed and maintained to prevent unauthorized access and to protect the contents from weather; (c) if the storage unit is a container, it must not impede exit in case of fire; (d) if the storage unit is not a container, all exits must be kept unobstructed; (e) any shelving in the storage unit must be made from a non-sparking material (for example, wood or painted metal); (f) nothing other than high-power rocket motors and reloading kits and igniters for high-power rocket motors may be stored with the rocket motors, reloading kits and igniters; (g) if the rocket motors, reloading kits and igniters, and any high-power rocket motors or reloading kits and igniters for high-power rocket motors, are not in consumer packs, the motors and kits must be stored separately from the igniters (for example, on different shelves or separated by a wooden barrier); (h) the storage unit must be attended when it is unlocked; (i) the interior of the storage unit must be kept clean and dry; (j) any spill, leakage or other contamination in the storage unit must be cleaned up immediately; (k) precautions that minimize the likelihood of fire in or near the storage unit must be taken; and (l) a sign that displays the words “Danger — Fire Hazard/ Risque d’incendie ” in letters at least 10 cm high and that prohibits smoking using letters, or a symbol, at least 10 cm high must be posted on the storage unit in a clearly visible location.",
+    "machine": {
+      "applies_to": "storage_unit",
+      "away_from_flammables_and_ignition": true,
+      "prevent_unauthorized_access": true,
+      "weather_protected": true,
+      "non_sparking_shelving": true,
+      "motors_separate_from_igniters_unless_consumer_packs": true,
+      "attended_when_unlocked": true,
+      "clean_dry": true,
+      "sign_text": "Danger — Fire Hazard/ Risque d’incendie",
+      "sign_min_letter_height_cm": 10,
+      "no_smoking_sign_min_height_cm": 10,
+      "container_must_not_impede_exit": true,
+      "exits_unobstructed": true,
+      "only_rocket_motors_kits_igniters_incl_high_power": true,
+      "clean_spills_immediately": true,
+      "fire_precautions": true
+    },
+    "sources": [
+      {
+        "url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2013-211/page-25.html",
+        "date": "2026-11-28",
+        "what": "s. 321(2)(a)-(l) verbatim"
+      }
+    ],
+    "source_url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2013-211/page-25.html",
+    "source_date": "2026-11-28",
+    "tier": "single-source",
+    "review": "opus",
+    "flag": "Storage unit only. Motors kept inside a home fall under s. 321(1) (dwelling): no 10 cm sign needed there. (g) also covers high-power items.",
+    "review_note": "2026-11-28 Opus reviewer subagent checked text verbatim against the saved Justice Laws pages and the machine fields; fixes applied (307 authority, 321(2) fields + flag, 602.43 flag)."
+  },
+  {
+    "id": "CA-CAR-602.43",
+    "authority": "Canadian Aviation Regulations (SOR/96-433), Part VI Subpart 2",
+    "section": "s. 602.43–602.44",
+    "text": "602.43 No person shall launch a rocket, other than a model rocket or a rocket of a type used in a fireworks display, except in accordance with an authorization issued by the Minister pursuant to section 602.44. 602.44 The Minister may issue an authorization referred to in section 602.42 or 602.43 where the release of the balloon or the launch of the rocket is in the public interest and is not likely to affect aviation safety.",
+    "machine": {
+      "model_rocket_needs_ministerial_authorization": false,
+      "other_rockets_need_authorization": true
+    },
+    "sources": [
+      {
+        "url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/page-59.html",
+        "date": "2026-11-28",
+        "what": "ss. 602.43-602.44 verbatim"
+      }
+    ],
+    "source_url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/page-59.html",
+    "source_date": "2026-11-28",
+    "tier": "single-source",
+    "review": "opus",
+    "flag": "'Model rocket' is defined in CAR s. 101.01 (reviewer recalls a mass limit and a recovery device; not yet fetched). A motor <=160 N·s does not by itself make the vehicle a model rocket: confirm against s. 101.01 before relying on the 'no authorization' value.",
+    "review_note": "2026-11-28 Opus reviewer subagent checked text verbatim against the saved Justice Laws pages and the machine fields; fixes applied (307 authority, 321(2) fields + flag, 602.43 flag)."
+  },
+  {
+    "id": "CA-CAR-602.45",
+    "authority": "Canadian Aviation Regulations (SOR/96-433), Part VI Subpart 2",
+    "section": "s. 602.45",
+    "text": "602.45 No person shall fly a kite or launch a model rocket or a rocket of a type used in a fireworks display into cloud or in a manner that is or is likely to be hazardous to aviation safety.",
+    "machine": {
+      "no_launch_into_cloud": true,
+      "no_hazard_to_aviation": true,
+      "numeric_distance_or_altitude_limit": null
+    },
+    "sources": [
+      {
+        "url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/page-59.html",
+        "date": "2026-11-28",
+        "what": "s. 602.45 verbatim"
+      }
+    ],
+    "source_url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/page-59.html",
+    "source_date": "2026-11-28",
+    "tier": "single-source",
+    "review": "opus",
+    "flag": "No site distance or altitude number in the CARs for model rockets; the C 120 m / D 150 m / E-G 300 m distances in T-012 are not in ss. 602.43-602.45 and still need a source.",
+    "review_note": "2026-11-28 Opus reviewer subagent checked text verbatim against the saved Justice Laws pages and the machine fields; fixes applied (307 authority, 321(2) fields + flag, 602.43 flag)."
   }
 ]

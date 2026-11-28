@@ -46,3 +46,6 @@ ts,ticket,vehicle,tier,task_type,size,actor,event,tokens_in,tokens_out,cache_rea
 2026-11-27T10:20:00Z,T-014,S0,3,procure,S,procurement,skipped,,,,,,,,usage_unavailable; gated on T-024/T-025
 2026-11-27T07:50:00Z,,S2,3,regression,S,sim-builder,run_regression,,,,,160,,1,usage_unavailable; t010_sweep rerun after motors.json change (946578e); identical; side run with real .eng curves E12/E12 1.5 %; no-op run (row not committed)
 2026-11-27T10:45:00Z,,Program,3,retry,S,retry,run_retry,,,,,,,1,usage_unavailable; all 4 builders reported, none blocked; no approved tickets; T-012-1 pending 2 nights (size M, no Haiku fallback); appended 7 no-op rows
+2026-11-28T08:40:00Z,T-011,Program,3,library,M,library-builder,second_source,,,,,,,1,usage_unavailable; 3 motors to dual-source; 3 flagged; Haiku researcher subagent 83566 tokens (platform)
+2026-11-28T08:40:00Z,T-012,Program,3,library,M,library-builder,rules_added,,,,,,,1,usage_unavailable; tier_fallback: haiku (draft discarded, not verbatim; 20269 tokens); 5 rules from official text; Opus review 32088 tokens (platform)
+2026-11-28T08:40:00Z,,Program,3,library,S,library-builder,stock_check,,,,,,,,usage_unavailable; no vendors.json entries: nothing to refresh
